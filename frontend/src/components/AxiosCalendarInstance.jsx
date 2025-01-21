@@ -1,9 +1,9 @@
 import axios, {Axios} from 'axios';
 
-const baseUrl = 'http://127.0.0.1:8000/'
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const AxiosCalendarInstance = axios.create({
-    baseURL: baseUrl,
+    baseURL: API_BASE_URL,
     timeout: 5000,
     headers: {
         "Content-Type": "application/json",
