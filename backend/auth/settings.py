@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for auth project.
 
@@ -20,13 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$_v)8f85h(q$hodm#n551ch^f8_24v4vqwl#2qsnf1(30$7pk!'
+# Get the secret key from the environment
+SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-key")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Set DEBUG from the environment (default to False for safety)
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+# Allow hosts from the environment or default to localhost for development
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 
 # Application definition
@@ -98,11 +101,11 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mycalendar_2r19',
-        'USER': 'voirtez',
-        'PASSWORD': 'U4zq30WgWjAwPNi39n5sBBDQsNUxz1p4',
-        'HOST': 'dpg-cu7slci3esus73focb20-a',
-        'PORT': '5432',
+        'NAME': os.getenv('DB_NAME', ''),
+        'USER': os.getenv('DB_USER', ''),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', ''),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
