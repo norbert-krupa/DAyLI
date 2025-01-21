@@ -1,4 +1,5 @@
 import os
+import json
 
 """
 Django settings for auth project.
@@ -61,9 +62,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-]
+CORS_ALLOWED_ORIGINS = json.loads(os.getenv("CORS_ALLOWED_ORIGINS", "[]"))
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
