@@ -97,10 +97,15 @@ REST_FRAMEWORK = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mycalendar_2r19',
+        'USER': 'voirtez',
+        'PASSWORD': 'U4zq30WgWjAwPNi39n5sBBDQsNUxz1p4',
+        'HOST': 'dpg-cu7slci3esus73focb20-a',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
