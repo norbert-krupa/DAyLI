@@ -3,8 +3,8 @@ from .models import *
 
 class TaskEventSerializer(serializers.ModelSerializer):
     title = serializers.CharField(source='name')
-    start = serializers.DateField(source='start_date')
-    end = serializers.DateField(source='end_date')
+    start = serializers.DateTimeField(source='start_datetime')
+    end = serializers.DateTimeField(source='end_datetime')
     class Meta:
         model = TasksEvents
         fields = ('id', 'title', 'start', 'end')
