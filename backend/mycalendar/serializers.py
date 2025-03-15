@@ -10,7 +10,7 @@ class TaskEventSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'start', 'end')
 
 class TaskEventGroupSerializer(serializers.ModelSerializer):
-    task_events = serializers.PrimaryKeyRelatedField(
+    tasks_events = serializers.PrimaryKeyRelatedField(
         queryset=TasksEvents.objects.all(), many=True
     )
     class Meta:
