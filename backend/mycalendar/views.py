@@ -20,14 +20,19 @@ class TaskEventViewSet(viewsets.ViewSet):
             return Response(serializer.errors, status=400)
 
     def list(self, request):
-        queryset =  TasksEvents.objects.filter(owner=request.user)
-        serializer = self.serializer_class(queryset, many=True)
+        if request.user.is_superuser:
+            queryset = TasksEvents.objects.all()
+        else:
+            queryset = TasksEvents.objects.filter(owner=request.user)
+        serializer = TaskEventSerializer(queryset, many=True)
         return Response(serializer.data)
 
-
     def retrieve(self, request, pk=None):
-        task_event = get_object_or_404(TasksEvents, pk=pk, owner=request.user)
-        serializer = self.serializer_class(task_event)
+        if request.user.is_superuser:
+            task_event = get_object_or_404(TasksEvents, pk=pk)
+        else:
+            task_event = get_object_or_404(TasksEvents, pk=pk, owner=request.user)
+        serializer = TaskEventSerializer(task_event)
         return Response(serializer.data)
     
     def destroy(self, request, pk=None):
@@ -65,13 +70,19 @@ class TaskEventGroupViewSet(viewsets.ViewSet):
             return Response(serializer.errors, status=400)
 
     def list(self, request):
-        queryset = TaskEventGroup.objects.filter(owner=request.user)
-        serializer = self.serializer_class(queryset, many=True)
+        if request.user.is_superuser:
+            queryset = TaskEventGroup.objects.all()
+        else:
+            queryset = TaskEventGroup.objects.filter(owner=request.user)
+        serializer = TaskEventGroupSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
-        task_event_group = get_object_or_404(TaskEventGroup, pk=pk, owner=request.user)
-        serializer = self.serializer_class(task_event_group)
+        if request.user.is_superuser:
+            task_event_group = get_object_or_404(TaskEventGroup, pk=pk)
+        else:
+            task_event_group = get_object_or_404(TaskEventGroup, pk=pk, owner=request.user)
+        serializer = TaskEventGroupSerializer(task_event_group)
         return Response(serializer.data)
 
     def destroy(self, request, pk=None):
