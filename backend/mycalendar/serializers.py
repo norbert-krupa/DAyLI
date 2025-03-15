@@ -10,9 +10,10 @@ class TaskEventSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'start', 'end')
 
 class TaskEventGroupSerializer(serializers.ModelSerializer):
-    tasks_events = serializers.PrimaryKeyRelatedField(
-        queryset=TasksEvents.objects.all(), many=True
-    )
+    name = serializers.CharField(source='name')
+    group_color = serializers.CharField(source='color')
+    events = serializers.PrimaryKeyRelatedField(source='tasks_events', queryset=TasksEvents.objects.all(), many=True)
+
     class Meta:
         model = TaskEventGroup
-        fields = ('id', 'name', 'color', 'tasks_events')
+        fields = ('id', 'name', 'group_color', 'events')
