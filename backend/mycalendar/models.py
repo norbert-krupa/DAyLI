@@ -15,3 +15,13 @@ class TasksEvents(models.Model):
 
     def __str__(self):
         return self.name
+    
+class TaskEventGroup(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    owner = models.ForeignKey('users.CustomUser', on_delete=models.CASCADE, related_name='task_event_groups')
+    name = models.CharField(max_length=200)
+    color = models.CharField(max_length=100)
+    tasks_events = models.ManyToManyField(TasksEvents, related_name='task_event_groups')
+
+    def __str__(self):
+        return self.name
