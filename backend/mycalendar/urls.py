@@ -5,4 +5,5 @@ from .views import *
 
 router = DefaultRouter()
 router.register('tasksevents', TaskEventViewSet, basename='tasksevents')
+router.register('taskeventgroups', TaskEventGroupViewSet, basename='taskeventgroups')
 urlpatterns = router.urls
