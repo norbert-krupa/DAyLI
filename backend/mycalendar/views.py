@@ -20,7 +20,9 @@ class TaskEventViewSet(viewsets.ViewSet):
             return Response(serializer.errors, status=400)
 
     def list(self, request):
-        if request.user.is_superuser:
+        if request.user.is_anonymous:
+            queryset = TasksEvents.objects.all() 
+        elif request.user.is_superuser:
             queryset = TasksEvents.objects.all()
         else:
             queryset = TasksEvents.objects.filter(owner=request.user)
@@ -28,7 +30,9 @@ class TaskEventViewSet(viewsets.ViewSet):
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
-        if request.user.is_superuser:
+        if request.user.is_anonymous:
+            task_event = get_object_or_404(TasksEvents, pk=pk)
+        elif request.user.is_superuser:
             task_event = get_object_or_404(TasksEvents, pk=pk)
         else:
             task_event = get_object_or_404(TasksEvents, pk=pk, owner=request.user)
@@ -70,7 +74,9 @@ class TaskEventGroupViewSet(viewsets.ViewSet):
             return Response(serializer.errors, status=400)
 
     def list(self, request):
-        if request.user.is_superuser:
+        if request.user.is_anonymous:
+            queryset = TaskEventGroup.objects.all()
+        elif request.user.is_superuser:
             queryset = TaskEventGroup.objects.all()
         else:
             queryset = TaskEventGroup.objects.filter(owner=request.user)
@@ -78,13 +84,14 @@ class TaskEventGroupViewSet(viewsets.ViewSet):
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
-        if request.user.is_superuser:
+        if request.user.is_anonymous:
+            task_event_group = get_object_or_404(TaskEventGroup, pk=pk)
+        elif request.user.is_superuser:
             task_event_group = get_object_or_404(TaskEventGroup, pk=pk)
         else:
             task_event_group = get_object_or_404(TaskEventGroup, pk=pk, owner=request.user)
         serializer = TaskEventGroupSerializer(task_event_group)
         return Response(serializer.data)
-
     def destroy(self, request, pk=None):
         try:
             task_event_group = self.queryset.get(pk=pk, owner=request.user)
