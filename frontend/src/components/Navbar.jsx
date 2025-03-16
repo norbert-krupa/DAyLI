@@ -30,6 +30,9 @@ export default function Navbar(props) {
         AxiosUserInstance.post(`logoutall/`, {})
         .then(() => {
             localStorage.removeItem('Token')
+            localStorage.removeItem('user_id')
+            localStorage.removeItem('username')
+            localStorage.removeItem('user_email')
             navigate('/')
         })
     }
