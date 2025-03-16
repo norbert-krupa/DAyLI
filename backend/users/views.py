@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from rest_framework.decorators import action
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
 from .serializers import *
@@ -57,6 +58,7 @@ class UserViewset(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
     
+    @action(detail=False, methods=['get'], url_path='me')
     def get_logged_in_user(self, request):
         user = request.user
 
@@ -65,5 +67,6 @@ class UserViewset(viewsets.ViewSet):
         
         return Response({
             'id': str(user.id),
+            'username': user.username,
             'email': user.email,
         })
