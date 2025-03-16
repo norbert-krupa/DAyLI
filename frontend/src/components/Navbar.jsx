@@ -40,7 +40,7 @@ export default function Navbar(props) {
             <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
                 <Toolbar>
                 <Typography variant="h6" noWrap component="div">
-                    [Username goes here]
+                    {localStorage.getItem('username')}
                 </Typography>
                 </Toolbar>
             </AppBar>

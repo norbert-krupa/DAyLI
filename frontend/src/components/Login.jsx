@@ -23,6 +23,14 @@ const Login = () => {
         .then((response) => {
             console.log(response)
             localStorage.setItem('Token', response.data.token)
+            AxiosUserInstance.get(`users/users/me/`)
+            .then((userResponse => {
+                console.log(userResponse)
+                localStorage.setItem('user_id', userResponse.data.id)
+                localStorage.setItem('username', userResponse.data.username)
+                localStorage.setItem('user_email', userResponse.data.email)
+            }
+            ))
             navigate('/home')
 
         })
