@@ -7,12 +7,11 @@ class TaskEventSerializer(serializers.ModelSerializer):
     end = serializers.DateTimeField(source='end_datetime')
     class Meta:
         model = TasksEvents
-        fields = ('id', 'title', 'start', 'end')
+        fields = ('id', 'title', 'owner', 'start', 'end', 'description', 'group')
 
 class TaskEventGroupSerializer(serializers.ModelSerializer):
     group_color = serializers.CharField(source='color')
-    events = serializers.PrimaryKeyRelatedField(source='tasks_events', queryset=TasksEvents.objects.all(), many=True)
 
     class Meta:
         model = TaskEventGroup
-        fields = ('id', 'name', 'group_color', 'events')
+        fields = ('id', 'name', 'owner', 'group_color')

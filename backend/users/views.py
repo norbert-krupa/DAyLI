@@ -56,3 +56,14 @@ class UserViewset(viewsets.ViewSet):
         queryset = User.objects.all()
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
+    
+    def get_logged_in_user(self, request):
+        user = request.user
+
+        if not user.is_authenticated:
+            return Response({"error": "Unauthorized"}, status=401)
+        
+        return Response({
+            'id': str(user.id),
+            'email': user.email,
+        })
