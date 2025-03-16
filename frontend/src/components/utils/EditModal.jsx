@@ -58,7 +58,7 @@ export default function EditModal({ open, onClose, eventDetails, setEvents }) {
   // Submit updated event data
   const handleSubmit = (e) => {
     e.preventDefault();
-    AxiosCalendarInstance.put(`tasksevents/${eventDetails.id}/`, {
+    AxiosCalendarInstance.put(`tasksevents/${eventDetails.id}/?owner=${localStorage.getItem('user_id')}/`, {
         title: formData.title,
         start: formData.start ? dayjs(formData.start).format('YYYY-MM-DD') : null,
         end: formData.end ? dayjs(formData.end).format('YYYY-MM-DD') : null,
