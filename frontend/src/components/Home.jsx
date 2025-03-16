@@ -83,7 +83,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true)
 
     const GetData = () => {
-        AxiosCalendarInstance.get(`tasksevents/`)
+        AxiosCalendarInstance.get(`tasksevents/?owner=${localStorage.getItem('user_id')}`)
         .then((response) => {
             setEvents(response.data)
             setLoading(false)

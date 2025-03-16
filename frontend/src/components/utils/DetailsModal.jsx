@@ -26,7 +26,7 @@ export default function DetailsModal({open, onClose, eventDetails, loading, onEd
             console.log("Event not found")
             return
         }
-        AxiosCalendarInstance.delete(`tasksevents/${eventDetails.id}/`)
+        AxiosCalendarInstance.delete(`tasksevents/${eventDetails.id}/?owner=${localStorage.getItem('user_id')}`)
         .then((response) => {
             console.log(response)
             window.location.reload()
@@ -52,12 +52,16 @@ export default function DetailsModal({open, onClose, eventDetails, loading, onEd
                         </Typography>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                             <Box>
-                                <Box sx={{fontWeight:'bold'}}>Start date: </Box>
+                                <Box sx={{fontWeight:'bold'}}>Start: </Box>
                                 <Box sx={{marginLeft:'10px'}}>{eventDetails.start}</Box>
                             </Box>
                             <Box>
-                                <Box sx={{fontWeight:'bold'}}>End date: </Box>
+                                <Box sx={{fontWeight:'bold'}}>End: </Box>
                                 <Box sx={{marginLeft:'10px'}}>{eventDetails.end}</Box>
+                            </Box>
+                            <Box>
+                                <Box sx={{fontWeight:'bold'}}>Description: </Box>
+                                <Box sx={{marginLeft:'10px'}}>{eventDetails.description}</Box>
                             </Box>
                             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
                                 <MyButton label="Edit" type="button" onClick={onEdit} />
