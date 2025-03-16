@@ -26,7 +26,7 @@ export default function DetailsModal({open, onClose, eventDetails, loading, onEd
             console.log("Event not found")
             return
         }
-        AxiosCalendarInstance.delete(`tasksevents/${eventDetails.id}/?owner=${localStorage.getItem('user_id')}`)
+        AxiosCalendarInstance.delete(`tasksevents/${eventDetails.id}/?owner=${localStorage.getItem('user_id')}/`)
         .then((response) => {
             console.log(response)
             window.location.reload()
