@@ -20,6 +20,7 @@ class TaskEventGroup(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     owner = models.ForeignKey('users.CustomUser', on_delete=models.CASCADE, related_name='task_event_groups')
     name = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
     color = models.CharField(max_length=100)
 
     def __str__(self):
