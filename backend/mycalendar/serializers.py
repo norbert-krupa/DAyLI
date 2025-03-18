@@ -14,4 +14,4 @@ class TaskEventGroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TaskEventGroup
-        fields = ('id', 'name', 'owner', 'group_color')
+        fields = ('id', 'name', 'description', 'owner', 'group_color')
