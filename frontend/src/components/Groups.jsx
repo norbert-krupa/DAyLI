@@ -7,6 +7,7 @@ import AxiosCalendarInstance from "./AxiosCalendarInstance";
 import MyIconButton from "./forms/MyIconButton";
 import CreateGroupModal from "./utils/CreateGroupModal";
 import EditGroupModal from "./utils/EditGroupModal";
+import ConfirmDeleteModal from "./utils/ConfirmDeleteModal"; // Import modal
 
 const Groups = () => {
     const [groups, setGroups] = useState([]);
@@ -16,6 +17,10 @@ const Groups = () => {
     const [openEditModal, setOpenEditModal] = useState(false);
     const [selectedGroup, setSelectedGroup] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
+
+    // State for delete confirmation modal
+    const [openDeleteModal, setOpenDeleteModal] = useState(false);
+    const [groupToDelete, setGroupToDelete] = useState(null);
 
     useEffect(() => {
         fetchGroups();
@@ -39,14 +44,27 @@ const Groups = () => {
             });
     };
 
-    const handleDeleteGroup = (groupId) => {
-        AxiosCalendarInstance.delete(`taskeventgroups/${groupId}/?owner=${localStorage.getItem("user_id")}`)
+    // Open delete confirmation modal
+    const handleDeleteGroupClick = (group) => {
+        setGroupToDelete(group);
+        setOpenDeleteModal(true);
+    };
+
+    // Confirm and delete group
+    const confirmDeleteGroup = () => {
+        if (!groupToDelete) return;
+
+        AxiosCalendarInstance.delete(`taskeventgroups/${groupToDelete.id}/?owner=${localStorage.getItem("user_id")}`)
             .then(() => {
-                setGroups((prevGroups) => prevGroups.filter((group) => group.id !== groupId));
-                setFilteredGroups((prevGroups) => prevGroups.filter((group) => group.id !== groupId));
+                setGroups((prevGroups) => prevGroups.filter((group) => group.id !== groupToDelete.id));
+                setFilteredGroups((prevGroups) => prevGroups.filter((group) => group.id !== groupToDelete.id));
             })
             .catch((error) => {
                 console.error("Error deleting group:", error);
+            })
+            .finally(() => {
+                setOpenDeleteModal(false);
+                setGroupToDelete(null);
             });
     };
 
@@ -119,6 +137,13 @@ const Groups = () => {
                 />
             )}
 
+            <ConfirmDeleteModal
+                open={openDeleteModal}
+                itemName={groupToDelete?.name || ""}
+                onConfirm={confirmDeleteGroup}
+                onCancel={() => setOpenDeleteModal(false)}
+            />
+
             {loading ? (
                 <CircularProgress />
             ) : filteredGroups.length > 0 ? (
@@ -171,7 +196,7 @@ const Groups = () => {
                             />
                             <MyIconButton
                                 icon={<DeleteForeverIcon />}
-                                onClick={() => handleDeleteGroup(group.id)}
+                                onClick={() => handleDeleteGroupClick(group)}
                                 ariaLabel="delete"
                                 sx={{
                                     backgroundColor: "red",
