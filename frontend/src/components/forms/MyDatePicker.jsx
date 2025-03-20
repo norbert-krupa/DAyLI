@@ -8,6 +8,8 @@ export default function MyDatePicker({ label, value, onChange, name }) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
+        className={"myForm"}
+        format='DD/MM/YYYY'
         label={label}
         value={value}
         onChange={(newValue) => onChange(name, newValue)}

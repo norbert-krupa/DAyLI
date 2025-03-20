@@ -12,6 +12,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
+import CategoryIcon from '@mui/icons-material/Category';
 import ChatIcon from '@mui/icons-material/Chat';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {Link, useLocation} from 'react-router-dom'
@@ -33,6 +34,7 @@ export default function Navbar(props) {
             localStorage.removeItem('user_id')
             localStorage.removeItem('username')
             localStorage.removeItem('user_email')
+            localStorage.removeItem('calendarView')
             navigate('/')
         })
     }
@@ -68,6 +70,14 @@ export default function Navbar(props) {
                         </ListItemButton>
                     </ListItem>
                     <ListItem key={2} disablePadding>
+                        <ListItemButton component={Link} to="/groups" selected={"/groups" === path}>
+                            <ListItemIcon>
+                                <CategoryIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={"Groups"} />
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem key={3} disablePadding>
                         <ListItemButton component={Link} to='/assistant' selected={"/assitant" === path}>
                             <ListItemIcon>
                                 <ChatIcon />
@@ -76,7 +86,7 @@ export default function Navbar(props) {
                         </ListItemButton>
                     </ListItem>
                     <Divider/>
-                    <ListItem key={3} disablePadding>
+                    <ListItem key={4} disablePadding>
                         <ListItemButton onClick={logoutUser}>
                             <ListItemIcon>
                                 <LogoutIcon/>

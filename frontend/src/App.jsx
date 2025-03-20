@@ -1,6 +1,7 @@
 import {React} from 'react'
 import './App.css'
 import Home from './components/Home'
+import Groups from './components/Groups'
 import Login from './components/Login'
 import Navbar from './components/Navbar'
 import Register from './components/Register'
@@ -28,6 +29,7 @@ function App() {
             <Routes>
               <Route element={<ProtectedRoute/>}>
                 <Route path="/home" element={<Home/>}/>
+                <Route path="/groups" element={<Groups/>}/>
                 <Route path="/assistant" element={<Assistant/>}/>
               </Route>
             </Routes>
