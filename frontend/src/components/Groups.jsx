@@ -40,8 +40,6 @@ const Groups = () => {
     };
 
     const handleDeleteGroup = (groupId) => {
-        if (!window.confirm("Are you sure you want to delete this group?")) return;
-
         AxiosCalendarInstance.delete(`taskeventgroups/${groupId}/?owner=${localStorage.getItem("user_id")}`)
             .then(() => {
                 setGroups((prevGroups) => prevGroups.filter((group) => group.id !== groupId));
@@ -49,7 +47,6 @@ const Groups = () => {
             })
             .catch((error) => {
                 console.error("Error deleting group:", error);
-                alert("Failed to delete the group. Please try again.");
             });
     };
 
