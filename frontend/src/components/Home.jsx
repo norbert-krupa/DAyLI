@@ -88,10 +88,6 @@ const Home = () => {
 
     const [loading, setLoading] = useState(true);
 
-    const darkenColor = (color, amount = 20) => {
-        return tinycolor(color).darken(amount).toString();
-    };
-
     const getTextColor = (bgColor) => {
         return tinycolor(bgColor).isLight() ? "#000000" : "#FFFFFF";
     };
@@ -110,7 +106,6 @@ const Home = () => {
                 const eventGroup = fetchedGroups.find(group => group.events.includes(event.id));
 
                 const backgroundColor = eventGroup ? eventGroup.group_color : "#999999";
-                const borderColor = darkenColor(backgroundColor, 25);
                 const textColor = getTextColor(backgroundColor);
 
                 return {
@@ -120,7 +115,7 @@ const Home = () => {
                     end: event.end,
                     allDay: false,
                     backgroundColor: backgroundColor,
-                    borderColor: borderColor,
+                    borderColor: backgroundColor,
                     textColor: textColor,
                     groupId: eventGroup ? eventGroup.id : null,
                 };
