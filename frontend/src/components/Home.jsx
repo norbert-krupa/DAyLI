@@ -106,7 +106,6 @@ const Home = () => {
                 const eventGroup = fetchedGroups.find(group => group.events.includes(event.id));
 
                 const backgroundColor = eventGroup ? eventGroup.group_color : "#999999";
-                const borderColor = backgroundColor
                 const textColor = getTextColor(backgroundColor);
 
                 return {
@@ -116,7 +115,7 @@ const Home = () => {
                     end: event.end,
                     allDay: false,
                     backgroundColor: backgroundColor,
-                    borderColor: borderColor,
+                    borderColor: backgroundColor,
                     textColor: textColor,
                     groupId: eventGroup ? eventGroup.id : null,
                 };
