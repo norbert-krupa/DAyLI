@@ -1,81 +1,47 @@
-import {React, useState } from 'react';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
+import { useEffect } from 'react';
+import {
+  Webchat,
+  WebchatProvider,
+  getClient
+} from '@botpress/webchat';
 
-const Assistant = () => {
-    const [text, setText] = useState('');
-    const [messages, setMessages] = useState([]);
+const clientId = '53612202-d931-4f14-9a0d-e01d5f6d435b';
 
-    const handleChange = (event) => {
-        setText(event.target.value);
-    };
-
-    const handleKeyDown = (event) => {
-        if (event.key === 'Enter' && text.trim() !== '') {
-            setMessages((prevMessages) => [...prevMessages, text]);
-            setText('');
-            event.preventDefault();
-        }
-    };
-
-    return (
-        <div>
-            <div style={{ flex: 1, overflow: 'auto', padding: '16px' }}>
-                {messages.length === 0 ? (
-                    <p>Chat messages will appear here.</p>
-                ) : (
-                    messages.map((message, index) => (
-                        <Box
-                            key={index}
-                            sx={{
-                                padding: 2,
-                                marginBottom: 2,
-                                backgroundColor: 'white',
-                                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                                borderRadius: '8px',
-                            }}
-                        >
-                            {message}
-                        </Box>
-                    ))
-                )}
-            </div>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: '100vh',
-                    marginLeft: 240,
-                    overflow: 'hidden',
-                }}
-            >
-                <Box
-                    sx={{
-                        padding: 2,
-                        backgroundColor: 'white',
-                        borderTop: '1px solid #ddd',
-                    }}
-                    style={{
-                        position: 'fixed',
-                        bottom: 0,
-                        left: 240,
-                        right: 0,
-                    }}
-                >
-                    <TextField
-                        fullWidth
-                        className={"myForm"}
-                        id="outlined-basic"
-                        variant="outlined"
-                        value={text}
-                        onChange={handleChange}
-                        onKeyDown={handleKeyDown}
-                        placeholder="Type your message..."
-                    />
-                </Box>
-            </div>
-        </div>
-    );
+const configuration = {
+  color: '#4A90E2',
+  botName: 'Assistant'
 };
 
-export default Assistant
+const Assistant = () => {
+  const userId = localStorage.getItem('user_id');
+
+  const client = getClient({ clientId });
+
+  useEffect(() => {
+    if (!localStorage.getItem('user_id')) {
+      localStorage.setItem('user_id', userId);
+    }
+
+    // Wait for Webchat to be ready
+    client.on('connectionOpened', async () => {
+      await client.sendEvent({
+        type: 'customEvent',
+        channel: 'web',
+        payload: {
+          user_id: userId,
+          name: 'TestUser2'
+        }
+      });
+    });
+  }, [client, userId]);
+
+  return (
+    <div style={{ padding: '24px', height: '100%' }}>
+      <WebchatProvider client={client} configuration={configuration}>
+        <Webchat />
+      </WebchatProvider>
+    </div>
+  );
+};
+
+export default Assistant;
