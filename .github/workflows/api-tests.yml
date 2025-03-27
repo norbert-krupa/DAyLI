@@ -1,0 +1,36 @@
+name: API Tests
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-api-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run unittest tests
+        env:
+          API_BASE_URL: https://mycalendarapp-backend.onrender.com
+          TEST_USER_ID: 6adec525-d93c-4bb6-9571-fb206549b9f2
+          UNAUTHORIZED_USER_ID: c12fbf09-86de-4011-a0d2-8ca0fb5ead61
+          PERMANENT_EVENT_ID: 0d285ce6-f3ac-44e7-b5af-d38cfe1290e6
+          PERMANENT_GROUP_ID: f4a19505-76c1-4942-aaef-baf771c9591b
+        run: |
+          python -m unittest discover -s tests/APITests
