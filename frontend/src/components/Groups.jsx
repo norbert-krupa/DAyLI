@@ -8,6 +8,7 @@ import MyIconButton from "./forms/MyIconButton";
 import CreateGroupModal from "./utils/CreateGroupModal";
 import EditGroupModal from "./utils/EditGroupModal";
 import ConfirmDeleteModal from "./utils/ConfirmDeleteModal"; // Import modal
+import BotpressWebchat from "./utils/BotpressWebchat";
 
 const Groups = () => {
     const [groups, setGroups] = useState([]);
@@ -212,6 +213,7 @@ const Groups = () => {
                     {searchQuery ? "No groups match your search." : "You have no groups yet."}
                 </Typography>
             )}
+            <BotpressWebchat />
         </Container>
     );
 };

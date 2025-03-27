@@ -77,16 +77,8 @@ export default function Navbar(props) {
                             <ListItemText primary={"Groups"} />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem key={3} disablePadding>
-                        <ListItemButton component={Link} to='/assistant' selected={"/assitant" === path}>
-                            <ListItemIcon>
-                                <ChatIcon />
-                            </ListItemIcon>
-                            <ListItemText primary={"Assitant"} />
-                        </ListItemButton>
-                    </ListItem>
                     <Divider/>
-                    <ListItem key={4} disablePadding>
+                    <ListItem key={3} disablePadding>
                         <ListItemButton onClick={logoutUser}>
                             <ListItemIcon>
                                 <LogoutIcon/>
