@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 
+const botId = import.meta.env.VITE_BOTPRESS_BOT_ID
+const clientId = import.meta.env.VITE_BOTPRESS_CLIENT_ID
+
 const BotpressWebchat = () => {
   useEffect(() => {
     const script = document.createElement('script');
@@ -10,8 +13,8 @@ const BotpressWebchat = () => {
       if (!window.botpress) return;
 
       window.botpress.init({
-        botId: '13cd0165-aefb-45aa-a816-e6da7b31eb89',
-        clientId: 'f9fb5f08-36c8-4dc5-8bd5-2eec3f7c26b3',
+        botId: botId,
+        clientId: clientId,
         selector: '#webchat',
         user: {
           data: {
@@ -25,9 +28,6 @@ const BotpressWebchat = () => {
         }
       });
 
-      window.botpress.on('webchat:ready', () => {
-        window.botpress.open();
-      });
     };
 
     document.body.appendChild(script);
@@ -40,8 +40,8 @@ const BotpressWebchat = () => {
         position: 'fixed',
         bottom: '24px',
         right: '24px',
-        width: '400px',
-        height: '600px',
+        width: '64px',
+        height: '64px',
         zIndex: 9999
       }}
     />
