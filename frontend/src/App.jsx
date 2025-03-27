@@ -30,7 +30,6 @@ function App() {
               <Route element={<ProtectedRoute/>}>
                 <Route path="/home" element={<Home/>}/>
                 <Route path="/groups" element={<Groups/>}/>
-                <Route path="/assistant" element={<Assistant/>}/>
               </Route>
             </Routes>
         }

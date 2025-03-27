@@ -6,6 +6,7 @@ import CreateModal from "./utils/CreateModal";
 import DetailsModal from "./utils/DetailsModal";
 import EditModal from "./utils/EditModal";
 import MyChipDropdown from "./forms/MyChipDropdown";
+import BotpressWebchat from "./utils/BotpressWebchat";
 import tinycolor from "tinycolor2";
 import dayjs from "dayjs";
 import "../App.css";
@@ -186,6 +187,7 @@ const Home = () => {
                         dateClickAction={handleOpen}
                         eventClickAction={handleOpenDetails}
                     />
+                    <BotpressWebchat />
                 </>
             )}
         </div>
