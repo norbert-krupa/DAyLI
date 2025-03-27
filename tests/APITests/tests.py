@@ -3,11 +3,11 @@ import requests
 import os
 from datetime import datetime, timedelta, timezone
 
-API_BASE_URL = os.getenv("API_BASE_URL", "https://mycalendarapp-backend.onrender.com")
-USER_ID = os.getenv("TEST_USER_ID", "6adec525-d93c-4bb6-9571-fb206549b9f2")
-UNAUTHORIZED_USER_ID = os.getenv("UNAUTHORIZED_USER_ID", "c12fbf09-86de-4011-a0d2-8ca0fb5ead61")
-PERMANENT_EVENT_ID = os.getenv("PERMANENT_EVENT_ID", "0d285ce6-f3ac-44e7-b5af-d38cfe1290e6")
-PERMANENT_GROUP_ID = os.getenv("PERMANENT_GROUP_ID", "f4a19505-76c1-4942-aaef-baf771c9591b")
+API_BASE_URL = os.getenv("API_BASE_URL")
+USER_ID = os.getenv("TEST_USER_ID")
+UNAUTHORIZED_USER_ID = os.getenv("UNAUTHORIZED_USER_ID")
+PERMANENT_EVENT_ID = os.getenv("PERMANENT_EVENT_ID")
+PERMANENT_GROUP_ID = os.getenv("PERMANENT_GROUP_ID")
 NOT_FOUND_UUID = "00000000-0000-0000-0000-000000000000"
 
 class APITests(unittest.TestCase):
