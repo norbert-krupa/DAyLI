@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -46,8 +46,8 @@ jobs:
           mkdir -p output
           robot --outputdir output --variable BROWSER:headlesschrome tests/
 
-      - name: Upload Robot Framework output directory
-        uses: actions/upload-artifact@v3
+      - name: Upload Robot Framework output
+        uses: actions/upload-artifact@v4
         with:
           name: robot-test-results
           path: tests/RobotTests/output/
@@ -58,8 +58,8 @@ jobs:
     if: success()
 
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      - name: Download test results artifact
+        uses: actions/download-artifact@v4
         with:
           name: robot-test-results
           path: output/
