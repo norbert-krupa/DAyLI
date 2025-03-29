@@ -33,7 +33,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -46,8 +46,25 @@ jobs:
           mkdir -p output
           robot --outputdir output --variable BROWSER:headlesschrome tests/
 
-      - name: Upload output directory as artifact
+      - name: Upload Robot Framework output directory
         uses: actions/upload-artifact@v3
         with:
           name: robot-test-results
           path: tests/RobotTests/output/
+
+  deploy-report:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: robot-test-results
+          path: output/
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: output/
