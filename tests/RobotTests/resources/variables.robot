@@ -7,7 +7,7 @@ Library    DateTime
 *** Variables ***
 
 ${URL}                https://mycalendarapp-frontend.onrender.com
-${BROWSER}            Chrome
+${BROWSER}            headlesschrome
 ${USERNAME}           APITester
 ${EMAIL}              apitesteremail@gmail.com      
 ${PASSWORD}           APITestP@ss1
