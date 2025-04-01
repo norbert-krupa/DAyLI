@@ -1,4 +1,4 @@
-name: Robot Framework Tests
+name: Run Robot Tests and Deploy Report
 
 on:
   push:
@@ -18,6 +18,11 @@ on:
     - cron: "0 12 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
@@ -27,7 +32,7 @@ jobs:
         working-directory: tests/RobotTests
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -40,32 +45,21 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Robot Framework tests (capture failures)
+      - name: Run Robot Framework tests (tolerate failure)
         run: |
           mkdir -p output
           robot --outputdir output --variable BROWSER:headlesschrome tests/
         continue-on-error: true
 
-      - name: Upload Robot Framework output
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-test-results
-          path: tests/RobotTests/output/
-
-  deploy-report:
-    needs: run-tests
-    runs-on: ubuntu-latest
-    if: always()
-
-    steps:
-      - name: Download test results artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: robot-test-results
-          path: output/
-
-      - name: Upload pages artifact
+      - name: Upload test results for GitHub Pages
         uses: actions/upload-pages-artifact@v2
         with:
-          path: output/
+          path: tests/RobotTests/output/
+
+  deploy:
+    needs: run-tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
