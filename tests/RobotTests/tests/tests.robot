@@ -1,7 +1,7 @@
 *** Settings ***
 
 Library    SeleniumLibrary
-Suite Setup    Set Screenshot Directory   screenshots
+Suite Setup    Set Screenshot Directory   output/screenshots
 
 Resource    ../resources/variables.robot
 Resource    ../resources/keywords.robot
