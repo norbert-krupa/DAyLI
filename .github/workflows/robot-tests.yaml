@@ -39,7 +39,6 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          python -c "import chromedriver_autoinstaller; chromedriver_autoinstaller.install()"
 
       - name: Run Robot Framework tests
         run: |
