@@ -1,0 +1,60 @@
+name: Run Robot Tests and Deploy Report
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tests/RobotTests/**'
+      - 'frontend/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tests/RobotTests/**'
+      - 'frontend/**'
+  schedule:
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write  # needed to push to gh-pages
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: tests/RobotTests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Robot Framework tests (allow failure)
+        run: |
+          mkdir -p output
+          robot --outputdir output --variable BROWSER:headlesschrome tests/
+        continue-on-error: true
+
+      - name: Copy report to root for Pages
+        run: |
+          cp output/log.html index.html
+
+      - name: Deploy report to GitHub Pages (gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: tests/RobotTests/output
