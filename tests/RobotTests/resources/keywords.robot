@@ -10,6 +10,7 @@ Resource       ../resources/variables.robot
 
 Open Login Page
     Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
     Title Should Be    DAyLI
 
 
