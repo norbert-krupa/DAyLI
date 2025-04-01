@@ -19,9 +19,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write  # needed to push to gh-pages
 
 jobs:
   run-tests:
@@ -45,21 +43,18 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Robot Framework tests (tolerate failure)
+      - name: Run Robot Framework tests (allow failure)
         run: |
           mkdir -p output
           robot --outputdir output --variable BROWSER:headlesschrome tests/
         continue-on-error: true
 
-      - name: Upload test results for GitHub Pages
-        uses: actions/upload-pages-artifact@v2
+      - name: Copy report to root for Pages
+        run: |
+          cp output/log.html index.html
+
+      - name: Deploy report to GitHub Pages (gh-pages branch)
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: tests/RobotTests/output/
-
-  deploy:
-    needs: run-tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: tests/RobotTests/output
