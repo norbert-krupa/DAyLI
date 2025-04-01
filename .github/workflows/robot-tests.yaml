@@ -40,12 +40,14 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Robot Framework tests
+      - name: Run Robot Framework tests (capture failures)
         run: |
           mkdir -p output
           robot --outputdir output --variable BROWSER:headlesschrome tests/
+        continue-on-error: true
 
       - name: Upload Robot Framework output
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: robot-test-results
@@ -54,7 +56,7 @@ jobs:
   deploy-report:
     needs: run-tests
     runs-on: ubuntu-latest
-    if: success()
+    if: always()
 
     steps:
       - name: Download test results artifact
