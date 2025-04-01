@@ -1,4 +1,4 @@
-name: Run Robot Tests and Deploy Report
+name: Robot Tests
 
 on:
   push:
