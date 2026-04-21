@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.2.2 (Python 3.11.12 on linux)" name="Generator">
+<meta content="Robot Framework 7.4.2 (Python 3.11.15 on linux)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -116,15 +116,16 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 1em 0 0 0;
 }
 h1 {
     float: left;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 1em 0;
     width: 75%;
 }
 h2 {
     clear: left;
+    margin: 1.5em 0 0.5em 0;
 }
 #generated {
     float: right;
@@ -168,7 +169,13 @@ h2 {
     background-color: var(--primary-color);
     border-radius: 3px;
 }
-.label.debug, .label.trace, .label.error, .label.keyword {
+/* https://stackoverflow.com/questions/75238633 */
+@supports (-moz-appearance: none) {
+    .label {
+        padding-top: 4px;
+    }
+}
+.label.debug, .label.trace, .label.error {
     letter-spacing: 0;
 }
 .label.pass, .label.fail, .label.error, .label.skip, .label.warn {
@@ -354,19 +361,6 @@ th.stats-col-graph:hover {
 [data-theme="dark"] .light-mode-icon,
 [data-theme="light"] .dark-mode-icon {
     display: block;
-}
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
 }
 </style>
 <style media="all">
@@ -957,7 +951,7 @@ window.model = (function () {
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign;
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1696,7 +1690,7 @@ function addStatistics() {
         '<th class="stats-col-elapsed">Elapsed</th>' +
         '<th class="stats-col-graph">Pass / Fail / Skip</th>';
     var statTable =
-        '<h2>{Test} Statistics</h2>' +
+        '<h2>Statistics</h2>' +
         '<table class="statistics" id="total-stats"><thead><tr>' +
         '<th class="stats-col-name">Total Statistics</th>' + statHeaders +
         '</tr></thead></table>' +
@@ -1706,7 +1700,7 @@ function addStatistics() {
         '<table class="statistics" id="suite-stats"><thead><tr>' +
         '<th class="stats-col-name">Statistics by Suite</th>' + statHeaders +
         '</tr></thead></table>';
-    $(testOrTask(statTable)).appendTo('#statistics-container');
+    $(statTable).appendTo('#statistics-container');
     util.map(['total', 'tag', 'suite'], addStatTable);
     addTooltipsToElapsedTimes();
     enableStatisticsSorter();
@@ -1887,22 +1881,22 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[0,0,4354],[[1,4,5,0,[],[0,20,4333],[],[[6,0,7,[8],[0,191,1978,9],[]],[10,0,11,[12],[0,2169,661,9],[]],[13,0,14,[15],[0,2830,827,16],[]],[17,0,18,[19],[0,3657,696,16],[]]],[],[4,0,4,0]]],[],[],[4,0,4,0]];
+window.output["suite"] = [1,2,3,0,[],[0,0,9049],[[1,4,5,0,[],[0,29,9019],[],[[6,0,7,[8],[0,237,6294,9],[]],[10,0,11,[12],[0,6531,950,9],[]],[13,0,14,[15],[0,7481,783,9],[]],[16,0,17,[18],[0,8265,783,9],[]]],[],[4,0,4,0]]],[],[],[4,0,4,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Tests","*/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests","*../tests","*/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests/tests.robot","*../tests/tests.robot","*Login Test","*<p>This test case verifies the login functionality of the application.\x3c/p>","*login","*Title should have been 'DAyLI' but was 'Service Suspended'.","*Logout Test","*<p>This test case verifies the logout functionality of the application.\x3c/p>","*logout","*Event Functions Test","*<p>This test case verifies the event CRUD functionality of the application.\x3c/p>","*events","*Title should have been 'DAyLI' but was 'Just a moment...'.","*Group Functions Test","*<p>This test case verifies the group CRUD functionality of the application.\x3c/p>","*groups"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Tests","*/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests","*../tests","*/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests/tests.robot","*../tests/tests.robot","*Login Test","*<p>This test case verifies the login functionality of the application.\x3c/p>","*login","*Title should have been 'DAyLI' but was 'Service Suspended'.","*Logout Test","*<p>This test case verifies the logout functionality of the application.\x3c/p>","*logout","*Event Functions Test","*<p>This test case verifies the event CRUD functionality of the application.\x3c/p>","*events","*Group Functions Test","*<p>This test case verifies the group CRUD functionality of the application.\x3c/p>","*groups"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:04","fail":4,"label":"All Tests","pass":0,"skip":0}],[{"elapsed":"00:00:01","fail":1,"label":"events","pass":0,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"groups","pass":0,"skip":0},{"elapsed":"00:00:02","fail":1,"label":"login","pass":0,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"logout","pass":0,"skip":0}],[{"elapsed":"00:00:04","fail":4,"id":"s1","label":"Tests","name":"Tests","pass":0,"skip":0},{"elapsed":"00:00:04","fail":4,"id":"s1-s1","label":"Tests.Tests","name":"Tests","pass":0,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:09","fail":4,"label":"All Tests","pass":0,"skip":0}],[{"elapsed":"00:00:01","fail":1,"label":"events","pass":0,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"groups","pass":0,"skip":0},{"elapsed":"00:00:06","fail":1,"label":"login","pass":0,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"logout","pass":0,"skip":0}],[{"elapsed":"00:00:09","fail":4,"id":"s1","label":"Tests","name":"Tests","pass":0,"skip":0},{"elapsed":"00:00:09","fail":4,"id":"s1-s1","label":"Tests.Tests","name":"Tests","pass":0,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1746103172029;
+window.output["baseMillis"] = 1776778499203;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 4358;
+window.output["generated"] = 9053;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -2285,7 +2279,7 @@ function hideHiddenDetailsColumns(elem) {
 </script>
 
 <script type="text/x-jquery-tmpl" id="summaryTableTemplate">
-  <h2>Summary Information</h2>
+  <h2>Summary</h2>
   <table class="details">
     <tr>
       <th>Status:</th>
@@ -2382,7 +2376,7 @@ function hideHiddenDetailsColumns(elem) {
 </script>
 
 <script type="text/x-jquery-tmpl" id="detailsHeaderTemplate">
-  <h2 id="${linkTarget}">{{= testOrTask('{Test} Details')}}</h2>
+  <h2 id="${linkTarget}">Details</h2>
   <ul id="detail-tabs">
     <li class="${totalTabStatus} detail-tab">
       <a href="#totals" onclick="renderTotalSelector()"
