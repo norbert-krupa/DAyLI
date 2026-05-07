@@ -83,4 +83,4 @@ robot tests/tests.robot
 
 ## Project status
 
-This was my final year project, submitted March 2025 and awarded First Class Honours. It's no longer actively maintained, but the codebase remains a as a portfolio piece.
+This was my final year project, submitted April 2025 and awarded First Class Honours. It's no longer actively maintained, but the codebase remains a as a portfolio piece.
