@@ -1,196 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.11.15 on linux)" generated="2026-04-21T13:34:59.201788" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.11.15 on linux)" generated="2026-05-07T13:49:23.181446" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests">
 <suite id="s1-s1" name="Tests" source="/home/runner/work/DAyLI/DAyLI/tests/RobotTests/tests/tests.robot">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary" type="SETUP">
 <arg>output/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2026-04-21T13:34:59.439361" elapsed="0.000347"/>
+<status status="PASS" start="2026-05-07T13:49:23.421355" elapsed="0.000229"/>
 </kw>
 <test id="s1-s1-t1" name="Login Test" line="11">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:34:59.441109" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2026-05-07T13:49:23.422677" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-21T13:34:59.440897" elapsed="6.170635"/>
+<status status="PASS" start="2026-05-07T13:49:23.422473" elapsed="4.942105"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-21T13:35:05.611938" elapsed="0.015461"/>
+<status status="PASS" start="2026-05-07T13:49:28.364954" elapsed="0.018216"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:05.672441" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-19.png"&gt;&lt;img src="screenshots/selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-04-21T13:35:05.672620" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
+<msg time="2026-05-07T13:49:28.428434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-21.png"&gt;&lt;img src="screenshots/selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-07T13:49:28.428611" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-04-21T13:35:05.627630" elapsed="0.045804">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:28.383433" elapsed="0.045974">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
-<status status="FAIL" start="2026-04-21T13:34:59.440517" elapsed="6.233103">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:23.422184" elapsed="5.007418">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
 <kw name="Login" owner="keywords">
-<status status="NOT RUN" start="2026-04-21T13:35:05.673934" elapsed="0.000051"/>
+<status status="NOT RUN" start="2026-05-07T13:49:28.429870" elapsed="0.000046"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-21T13:35:05.674235" elapsed="0.059065"/>
+<status status="PASS" start="2026-05-07T13:49:28.430163" elapsed="0.058879"/>
 </kw>
 <doc>This test case verifies the login functionality of the application.</doc>
 <tag>login</tag>
-<status status="FAIL" start="2026-04-21T13:34:59.439899" elapsed="6.293514">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:23.421716" elapsed="5.067440">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </test>
 <test id="s1-s1-t2" name="Logout Test" line="19">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:05.734824" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2026-05-07T13:49:28.490638" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-21T13:35:05.734551" elapsed="0.828755"/>
+<status status="PASS" start="2026-05-07T13:49:28.490385" elapsed="0.531753"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-21T13:35:06.563611" elapsed="0.018496"/>
+<status status="PASS" start="2026-05-07T13:49:29.022406" elapsed="0.014487"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:06.622300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-20.png"&gt;&lt;img src="screenshots/selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-04-21T13:35:06.622468" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
+<msg time="2026-05-07T13:49:29.078528" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-22.png"&gt;&lt;img src="screenshots/selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-07T13:49:29.078698" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-04-21T13:35:06.582340" elapsed="0.040548">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:29.037077" elapsed="0.041982">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
-<status status="FAIL" start="2026-04-21T13:35:05.734259" elapsed="0.888797">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:28.490041" elapsed="0.589191">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
 <kw name="Login" owner="keywords">
-<status status="NOT RUN" start="2026-04-21T13:35:06.623309" elapsed="0.000043"/>
+<status status="NOT RUN" start="2026-05-07T13:49:29.079497" elapsed="0.000045"/>
 </kw>
 <kw name="Logout" owner="keywords">
-<status status="NOT RUN" start="2026-04-21T13:35:06.623477" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-05-07T13:49:29.079672" elapsed="0.000028"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-21T13:35:06.623764" elapsed="0.059508"/>
+<status status="PASS" start="2026-05-07T13:49:29.079918" elapsed="0.059222"/>
 </kw>
 <doc>This test case verifies the logout functionality of the application.</doc>
 <tag>logout</tag>
-<status status="FAIL" start="2026-04-21T13:35:05.733791" elapsed="0.949591">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:28.489541" elapsed="0.649702">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </test>
 <test id="s1-s1-t3" name="Event Functions Test" line="28">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:06.685029" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2026-05-07T13:49:29.140889" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-21T13:35:06.684785" elapsed="0.657563"/>
+<status status="PASS" start="2026-05-07T13:49:29.140651" elapsed="0.838413"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-21T13:35:07.342647" elapsed="0.014935"/>
+<status status="PASS" start="2026-05-07T13:49:29.979276" elapsed="0.014533"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:07.405811" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-21.png"&gt;&lt;img src="screenshots/selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-04-21T13:35:07.405983" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
+<msg time="2026-05-07T13:49:30.028445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-23.png"&gt;&lt;img src="screenshots/selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-07T13:49:30.028602" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-04-21T13:35:07.357814" elapsed="0.048520">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:29.993993" elapsed="0.034943">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
-<status status="FAIL" start="2026-04-21T13:35:06.684226" elapsed="0.722265">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:29.140078" elapsed="0.889010">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
 <kw name="Login" owner="keywords">
-<status status="NOT RUN" start="2026-04-21T13:35:07.406758" elapsed="0.000040"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.029351" elapsed="0.000042"/>
 </kw>
 <kw name="Select view" owner="keywords">
 <arg>${MONTH_VIEW_SELECTOR_XPATH}</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:07.406923" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.029530" elapsed="0.000030"/>
 </kw>
 <kw name="Get Current Date" owner="DateTime">
 <var>${date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="NOT RUN" start="2026-04-21T13:35:07.407060" elapsed="0.000025"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.029677" elapsed="0.000026"/>
 </kw>
 <kw name="Create Event" owner="keywords">
 <arg>${date}</arg>
 <arg>Test Event Title</arg>
 <arg>test group 1</arg>
 <arg>Test Event Description</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:07.407238" elapsed="0.000026"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.029858" elapsed="0.000027"/>
 </kw>
 <kw name="Update Event" owner="keywords">
 <arg>${date}</arg>
 <arg>Test Event Title</arg>
 <arg>Updated Event Title</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:07.407409" elapsed="0.000025"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.030028" elapsed="0.000025"/>
 </kw>
 <kw name="Delete Event" owner="keywords">
 <arg>${date}</arg>
 <arg>Updated Event Title</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:07.407573" elapsed="0.000032"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.030198" elapsed="0.000025"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-21T13:35:07.407821" elapsed="0.059316"/>
+<status status="PASS" start="2026-05-07T13:49:30.030461" elapsed="0.058957"/>
 </kw>
 <doc>This test case verifies the event CRUD functionality of the application.</doc>
 <tag>events</tag>
-<status status="FAIL" start="2026-04-21T13:35:06.683752" elapsed="0.783488">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:29.139610" elapsed="0.949910">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </test>
 <test id="s1-s1-t4" name="Group Functions Test" line="41">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:07.468839" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2026-05-07T13:49:30.090851" level="INFO">Opening browser 'headlesschrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-21T13:35:07.468556" elapsed="0.658116"/>
+<status status="PASS" start="2026-05-07T13:49:30.090630" elapsed="0.479764"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-21T13:35:08.127034" elapsed="0.016724"/>
+<status status="PASS" start="2026-05-07T13:49:30.570744" elapsed="0.016636"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-04-21T13:35:08.189034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-22.png"&gt;&lt;img src="screenshots/selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-04-21T13:35:08.189191" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
+<msg time="2026-05-07T13:49:30.628364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-24.png"&gt;&lt;img src="screenshots/selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-07T13:49:30.628523" level="FAIL">Title should have been 'DAyLI' but was 'Service Suspended'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-04-21T13:35:08.143964" elapsed="0.045539">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:30.587579" elapsed="0.041253">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
-<status status="FAIL" start="2026-04-21T13:35:07.468183" elapsed="0.721474">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:30.090342" elapsed="0.538644">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </kw>
 <kw name="Login" owner="keywords">
-<status status="NOT RUN" start="2026-04-21T13:35:08.189929" elapsed="0.000039"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.629205" elapsed="0.000038"/>
 </kw>
 <kw name="Go To Menu" owner="keywords">
 <arg>${GROUPS_BUTTON_XPATH}</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:08.190098" elapsed="0.000026"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.629417" elapsed="0.000033"/>
 </kw>
 <kw name="Create Group" owner="keywords">
 <arg>New Group</arg>
 <arg>New Group Description</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:08.190252" elapsed="0.000025"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.629599" elapsed="0.000027"/>
 </kw>
 <kw name="Edit Group" owner="keywords">
 <arg>New Group</arg>
 <arg>Edited Group Name</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:08.190405" elapsed="0.000024"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.629760" elapsed="0.000027"/>
 </kw>
 <kw name="Delete Group" owner="keywords">
 <arg>Edited Group Name</arg>
-<status status="NOT RUN" start="2026-04-21T13:35:08.190549" elapsed="0.000024"/>
+<status status="NOT RUN" start="2026-05-07T13:49:30.629913" elapsed="0.000025"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-21T13:35:08.190830" elapsed="0.059234"/>
+<status status="PASS" start="2026-05-07T13:49:30.630157" elapsed="0.059210"/>
 </kw>
 <doc>This test case verifies the group CRUD functionality of the application.</doc>
 <tag>groups</tag>
-<status status="FAIL" start="2026-04-21T13:35:07.467562" elapsed="0.782607">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
+<status status="FAIL" start="2026-05-07T13:49:30.089846" elapsed="0.599628">Title should have been 'DAyLI' but was 'Service Suspended'.</status>
 </test>
-<status status="FAIL" start="2026-04-21T13:34:59.232185" elapsed="9.018524"/>
+<status status="FAIL" start="2026-05-07T13:49:23.211520" elapsed="7.478549"/>
 </suite>
-<status status="FAIL" start="2026-04-21T13:34:59.202820" elapsed="9.048504"/>
+<status status="FAIL" start="2026-05-07T13:49:23.182285" elapsed="7.508452"/>
 </suite>
 <statistics>
 <total>
