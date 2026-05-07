@@ -1,4 +1,4 @@
-# DAyLI — AI-Powered Calendar & Task Management
+# DAyLI - AI-Powered Calendar & Task Management Application
 
 > Final Year Project · TU Dublin BSc Computer Science · Awarded First Class Honours
 >
