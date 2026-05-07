@@ -1,1209 +1,1225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-03-31T15:05:43.923039" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.0 on win32)" generated="2025-04-27T12:16:44.770721" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\Voirtez\Desktop\College\Year 4\Final Year Project\Project Code\tests\RobotTests\tests">
 <suite id="s1-s1" name="Tests" source="C:\Users\Voirtez\Desktop\College\Year 4\Final Year Project\Project Code\tests\RobotTests\tests\tests.robot">
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary" type="SETUP">
-<arg>screenshots</arg>
+<arg>output/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2025-03-31T15:05:44.511650" elapsed="0.000999"/>
+<status status="PASS" start="2025-04-27T12:16:45.054813" elapsed="0.000000"/>
 </kw>
 <test id="s1-s1-t1" name="Login Test" line="11">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:44.515652" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2025-04-27T12:16:45.055820" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-31T15:05:44.514650" elapsed="2.713817"/>
+<status status="PASS" start="2025-04-27T12:16:45.055820" elapsed="2.138791"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:16:47.194611" elapsed="0.041800"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:47.234988" level="INFO">Page title is 'DAyLI'.</msg>
+<msg time="2025-04-27T12:16:47.242974" level="INFO">Page title is 'DAyLI'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-03-31T15:05:47.228467" elapsed="0.006521"/>
+<status status="PASS" start="2025-04-27T12:16:47.236411" elapsed="0.006563"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:05:44.514650" elapsed="2.720338"/>
+<status status="PASS" start="2025-04-27T12:16:45.054813" elapsed="2.188161"/>
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:47.236505" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
+<msg time="2025-04-27T12:16:47.244974" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:47.235498" elapsed="0.153558"/>
+<status status="PASS" start="2025-04-27T12:16:47.243973" elapsed="0.145772"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:47.389056" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
+<msg time="2025-04-27T12:16:47.390753" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:47.389056" elapsed="0.139443"/>
+<status status="PASS" start="2025-04-27T12:16:47.389745" elapsed="0.090858"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:47.529419" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
+<msg time="2025-04-27T12:16:47.481600" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:47.529419" elapsed="0.086505"/>
+<status status="PASS" start="2025-04-27T12:16:47.480603" elapsed="0.069202"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:05:47.617438" elapsed="0.977990"/>
+<status status="PASS" start="2025-04-27T12:16:47.549805" elapsed="0.866044"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:05:50.596359" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:16:50.415906" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:05:48.595428" elapsed="2.000931"/>
+<status status="PASS" start="2025-04-27T12:16:48.415849" elapsed="2.000057"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2025-03-31T15:05:50.596359" elapsed="0.234037"/>
+<status status="PASS" start="2025-04-27T12:16:50.415906" elapsed="0.224058"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:05:50.830396" elapsed="0.017065"/>
+<status status="PASS" start="2025-04-27T12:16:50.639964" elapsed="0.030619"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:05:52.848106" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:16:52.671807" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:05:50.847543" elapsed="2.000563"/>
+<status status="PASS" start="2025-04-27T12:16:50.670583" elapsed="2.001224"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:52.848640" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
+<msg time="2025-04-27T12:16:52.672318" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
 <arg>${HEADER_TEXTAREA_XPATH}</arg>
 <arg>${USERNAME}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:05:52.848640" elapsed="0.021601"/>
+<status status="PASS" start="2025-04-27T12:16:52.672318" elapsed="0.021152"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:05:47.235498" elapsed="5.636157"/>
+<status status="PASS" start="2025-04-27T12:16:47.243973" elapsed="5.449497"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-31T15:05:52.871655" elapsed="2.163960"/>
+<status status="PASS" start="2025-04-27T12:16:52.694470" elapsed="2.197684"/>
 </kw>
 <doc>This test case verifies the login functionality of the application.</doc>
 <tag>login</tag>
-<status status="PASS" start="2025-03-31T15:05:44.513648" elapsed="10.521967"/>
+<status status="PASS" start="2025-04-27T12:16:45.054813" elapsed="9.838345"/>
 </test>
 <test id="s1-s1-t2" name="Logout Test" line="19">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:55.038245" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2025-04-27T12:16:54.895162" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-31T15:05:55.036618" elapsed="1.667121"/>
+<status status="PASS" start="2025-04-27T12:16:54.894155" elapsed="1.779833"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:16:56.673988" elapsed="0.032407"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:56.709249" level="INFO">Page title is 'DAyLI'.</msg>
+<msg time="2025-04-27T12:16:56.711435" level="INFO">Page title is 'DAyLI'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-03-31T15:05:56.703739" elapsed="0.005510"/>
+<status status="PASS" start="2025-04-27T12:16:56.706395" elapsed="0.005040"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:05:55.036618" elapsed="1.672631"/>
+<status status="PASS" start="2025-04-27T12:16:54.894155" elapsed="1.817280"/>
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:56.710257" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
+<msg time="2025-04-27T12:16:56.712435" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:56.710257" elapsed="0.163889"/>
+<status status="PASS" start="2025-04-27T12:16:56.712435" elapsed="0.124414"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:56.874653" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
+<msg time="2025-04-27T12:16:56.836849" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:56.874146" elapsed="0.134654"/>
+<status status="PASS" start="2025-04-27T12:16:56.836849" elapsed="0.079805"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:05:57.010388" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
+<msg time="2025-04-27T12:16:56.916654" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:05:57.009879" elapsed="0.076397"/>
+<status status="PASS" start="2025-04-27T12:16:56.916654" elapsed="0.059760"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:05:57.086276" elapsed="1.121825"/>
+<status status="PASS" start="2025-04-27T12:16:56.976414" elapsed="0.837720"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:00.208934" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:16:59.814536" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:05:58.208101" elapsed="2.000833"/>
+<status status="PASS" start="2025-04-27T12:16:57.814134" elapsed="2.000402"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2025-03-31T15:06:00.208934" elapsed="0.104824"/>
+<status status="PASS" start="2025-04-27T12:16:59.814536" elapsed="0.506898"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:00.314706" elapsed="0.014290"/>
+<status status="PASS" start="2025-04-27T12:17:00.321434" elapsed="0.015516"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:02.329328" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:02.338174" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:00.328996" elapsed="2.000332"/>
+<status status="PASS" start="2025-04-27T12:17:00.336950" elapsed="2.001224"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:02.329328" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
+<msg time="2025-04-27T12:17:02.338174" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
 <arg>${HEADER_TEXTAREA_XPATH}</arg>
 <arg>${USERNAME}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:02.329328" elapsed="0.019046"/>
+<status status="PASS" start="2025-04-27T12:17:02.338174" elapsed="0.032005"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:05:56.710257" elapsed="5.638117"/>
+<status status="PASS" start="2025-04-27T12:16:56.711435" elapsed="5.658744"/>
 </kw>
 <kw name="Logout" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:02.349400" level="INFO">Clicking element 'xpath=//div[@role="button" and .//span[normalize-space(text())="Logout"]]'.</msg>
+<msg time="2025-04-27T12:17:02.371186" level="INFO">Clicking element 'xpath=//div[@role="button" and .//span[normalize-space(text())="Logout"]]'.</msg>
 <arg>${LOGOUT_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:02.349400" elapsed="0.052067"/>
+<status status="PASS" start="2025-04-27T12:17:02.371186" elapsed="0.060591"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:02.402484" elapsed="1.046974"/>
+<status status="PASS" start="2025-04-27T12:17:02.432776" elapsed="0.225105"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:06:02.348374" elapsed="1.101084"/>
+<status status="PASS" start="2025-04-27T12:17:02.371186" elapsed="0.286695"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:03.449458" elapsed="2.107562"/>
+<status status="PASS" start="2025-04-27T12:17:02.657881" elapsed="2.159042"/>
 </kw>
 <doc>This test case verifies the logout functionality of the application.</doc>
 <tag>logout</tag>
-<status status="PASS" start="2025-03-31T15:05:55.036618" elapsed="10.520908"/>
+<status status="PASS" start="2025-04-27T12:16:54.893158" elapsed="9.923765"/>
 </test>
 <test id="s1-s1-t3" name="Event Functions Test" line="28">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:05.558612" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2025-04-27T12:17:04.820469" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-31T15:06:05.558612" elapsed="1.546687"/>
+<status status="PASS" start="2025-04-27T12:17:04.819455" elapsed="1.849764"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:17:06.669219" elapsed="0.032794"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:07.113837" level="INFO">Page title is 'DAyLI'.</msg>
+<msg time="2025-04-27T12:17:06.707014" level="INFO">Page title is 'DAyLI'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-03-31T15:06:07.105299" elapsed="0.008538"/>
+<status status="PASS" start="2025-04-27T12:17:06.703012" elapsed="0.004002"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:06:05.558068" elapsed="1.555769"/>
+<status status="PASS" start="2025-04-27T12:17:04.819455" elapsed="1.887559"/>
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:07.114833" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
+<msg time="2025-04-27T12:17:06.708013" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:07.114833" elapsed="0.124515"/>
+<status status="PASS" start="2025-04-27T12:17:06.708013" elapsed="0.149926"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:07.240345" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
+<msg time="2025-04-27T12:17:06.857939" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:07.240345" elapsed="0.116986"/>
+<status status="PASS" start="2025-04-27T12:17:06.857939" elapsed="0.097537"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:07.358334" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
+<msg time="2025-04-27T12:17:06.955476" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:07.357331" elapsed="0.064873"/>
+<status status="PASS" start="2025-04-27T12:17:06.955476" elapsed="0.069625"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:07.422204" elapsed="1.265498"/>
+<status status="PASS" start="2025-04-27T12:17:07.025101" elapsed="0.865805"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:10.688081" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:09.926654" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:08.687702" elapsed="2.000379"/>
+<status status="PASS" start="2025-04-27T12:17:07.890906" elapsed="2.035748"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2025-03-31T15:06:10.688081" elapsed="0.128302"/>
+<status status="PASS" start="2025-04-27T12:17:09.927661" elapsed="0.212135"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:10.816383" elapsed="0.015797"/>
+<status status="PASS" start="2025-04-27T12:17:10.139796" elapsed="0.014772"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:12.832812" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:12.154656" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:10.832180" elapsed="2.000632"/>
+<status status="PASS" start="2025-04-27T12:17:10.154568" elapsed="2.000088"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:12.833777" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
+<msg time="2025-04-27T12:17:12.155174" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
 <arg>${HEADER_TEXTAREA_XPATH}</arg>
 <arg>${USERNAME}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:12.832812" elapsed="0.022068"/>
+<status status="PASS" start="2025-04-27T12:17:12.155174" elapsed="0.016280"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:06:07.113837" elapsed="5.741043"/>
+<status status="PASS" start="2025-04-27T12:17:06.707014" elapsed="5.464440"/>
 </kw>
 <kw name="Select view" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:12.855879" level="INFO">Clicking element 'xpath=//button[@type="button" and @title="month view" and normalize-space(text())="month"]'.</msg>
+<msg time="2025-04-27T12:17:12.172454" level="INFO">Clicking element 'xpath=//button[@type="button" and @title="month view" and normalize-space(text())="month"]'.</msg>
 <arg>${view_xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:12.855879" elapsed="0.115879"/>
+<status status="PASS" start="2025-04-27T12:17:12.171454" elapsed="0.087170"/>
 </kw>
 <arg>${MONTH_VIEW_SELECTOR_XPATH}</arg>
-<status status="PASS" start="2025-03-31T15:06:12.854880" elapsed="0.116878"/>
+<status status="PASS" start="2025-04-27T12:17:12.171454" elapsed="0.087170"/>
 </kw>
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2025-03-31T15:06:12.972748" level="INFO">${date} = 2025-03-31</msg>
+<msg time="2025-04-27T12:17:12.259624" level="INFO">${date} = 2025-04-27</msg>
 <var>${date}</var>
 <arg>result_format=%Y-%m-%d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-03-31T15:06:12.971758" elapsed="0.000990"/>
+<status status="PASS" start="2025-04-27T12:17:12.258624" elapsed="0.001000"/>
 </kw>
 <kw name="Create Event" owner="keywords">
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:12.973255" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-03-31"]</msg>
+<msg time="2025-04-27T12:17:12.259624" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-04-27"]</msg>
 <var>${DATE_XPATH}</var>
 <arg>${DATE_CELL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${date}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:12.973255" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:12.259624" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:12.973255" level="INFO">Clicking element 'xpath=//td[@role="gridcell" and @data-date="2025-03-31"]'.</msg>
+<msg time="2025-04-27T12:17:12.260624" level="INFO">Clicking element 'xpath=//td[@role="gridcell" and @data-date="2025-04-27"]'.</msg>
 <arg>${DATE_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:12.973255" elapsed="0.059862"/>
+<status status="PASS" start="2025-04-27T12:17:12.259624" elapsed="0.052781"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EVENT_TITLE_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.033117" elapsed="0.082947"/>
+<status status="PASS" start="2025-04-27T12:17:12.312405" elapsed="0.092864"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:13.116064" level="INFO">Typing text 'Test Event Title' into text field 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
+<msg time="2025-04-27T12:17:12.406470" level="INFO">Typing text 'Test Event Title' into text field 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
 <arg>${EVENT_TITLE_XPATH}</arg>
 <arg>${title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.116064" elapsed="0.273273"/>
+<status status="PASS" start="2025-04-27T12:17:12.405269" elapsed="0.282733"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:13.390408" level="INFO">Clicking element 'xpath=//div[@role="combobox" and @id="mui-component-select-group"]'.</msg>
+<msg time="2025-04-27T12:17:12.689000" level="INFO">Clicking element 'xpath=//div[@role="combobox" and @id="mui-component-select-group"]'.</msg>
 <arg>${EVENT_GROUP_DROPDOWN_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.389337" elapsed="0.062216"/>
+<status status="PASS" start="2025-04-27T12:17:12.688002" elapsed="0.066025"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EVENT_GROUP_OPTIONS_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.451553" elapsed="0.015424"/>
+<status status="PASS" start="2025-04-27T12:17:12.754027" elapsed="0.018048"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:13.466977" level="INFO">${GROUP_OPTION_XPATH} = xpath=//ul[@role="listbox"]//li[normalize-space(.)="test group 1"]</msg>
+<msg time="2025-04-27T12:17:12.773075" level="INFO">${GROUP_OPTION_XPATH} = xpath=//ul[@role="listbox"]//li[normalize-space(.)="test group 1"]</msg>
 <var>${GROUP_OPTION_XPATH}</var>
 <arg>${EVENT_GROUP_OPTION_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${group}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.466977" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:12.772075" elapsed="0.001000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:13.466977" level="INFO">Clicking element 'xpath=//ul[@role="listbox"]//li[normalize-space(.)="test group 1"]'.</msg>
+<msg time="2025-04-27T12:17:12.774080" level="INFO">Clicking element 'xpath=//ul[@role="listbox"]//li[normalize-space(.)="test group 1"]'.</msg>
 <arg>${GROUP_OPTION_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.466977" elapsed="0.078494"/>
+<status status="PASS" start="2025-04-27T12:17:12.773075" elapsed="0.087395"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:13.545471" level="INFO">Typing text 'Test Event Description' into text field 'xpath=//textarea[@id="outlined-multiline-static"]'.</msg>
+<msg time="2025-04-27T12:17:12.861472" level="INFO">Typing text 'Test Event Description' into text field 'xpath=//textarea[@id="outlined-multiline-static"]'.</msg>
 <arg>${EVENT_DESCRIPTION_XPATH}</arg>
 <arg>${description}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.545471" elapsed="0.334024"/>
+<status status="PASS" start="2025-04-27T12:17:12.860470" elapsed="0.321830"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:13.880496" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Create"]'.</msg>
+<msg time="2025-04-27T12:17:13.182300" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Create"]'.</msg>
 <arg>${CREATE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.879495" elapsed="0.061438"/>
+<status status="PASS" start="2025-04-27T12:17:13.182300" elapsed="0.046085"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:15.941067" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:15.228722" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:13.940933" elapsed="2.000134"/>
+<status status="PASS" start="2025-04-27T12:17:13.228385" elapsed="2.000337"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:15.957326" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-03-31"]' contains text 'Test Event Title'.</msg>
+<msg time="2025-04-27T12:17:15.240831" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-04-27"]' contains text 'Test Event Title'.</msg>
 <arg>${DATE_XPATH}</arg>
 <arg>${title}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:15.941067" elapsed="0.016259"/>
+<status status="PASS" start="2025-04-27T12:17:15.228722" elapsed="0.012109"/>
 </kw>
 <arg>${date}</arg>
 <arg>Test Event Title</arg>
 <arg>test group 1</arg>
 <arg>Test Event Description</arg>
-<status status="PASS" start="2025-03-31T15:06:12.972748" elapsed="2.984578"/>
+<status status="PASS" start="2025-04-27T12:17:12.259624" elapsed="2.982204"/>
 </kw>
 <kw name="Update Event" owner="keywords">
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:15.958335" level="INFO">${EVENT_XPATH} = xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Test Event Title")]</msg>
+<msg time="2025-04-27T12:17:15.241828" level="INFO">${EVENT_XPATH} = xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Test Event Title")]</msg>
 <var>${EVENT_XPATH}</var>
 <arg>${EVENT_BLOCK_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${current_title}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:15.958335" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:15.241828" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:15.959325" level="INFO">Clicking element 'xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Test Event Title")]'.</msg>
+<msg time="2025-04-27T12:17:15.242827" level="INFO">Clicking element 'xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Test Event Title")]'.</msg>
 <arg>${EVENT_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:15.958335" elapsed="0.070625"/>
+<status status="PASS" start="2025-04-27T12:17:15.242827" elapsed="0.056695"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:16.029958" level="INFO">${DETAILS_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h5[normalize-space(.)="Test Event Title"]]</msg>
+<msg time="2025-04-27T12:17:15.300524" level="INFO">${DETAILS_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h5[normalize-space(.)="Test Event Title"]]</msg>
 <var>${DETAILS_MODAL_XPATH}</var>
 <arg>${DETAILS_MODAL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${current_title}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.028960" elapsed="0.000998"/>
+<status status="PASS" start="2025-04-27T12:17:15.300524" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${DETAILS_MODAL_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.029958" elapsed="0.427371"/>
+<status status="PASS" start="2025-04-27T12:17:15.300524" elapsed="0.218570"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:16.457329" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Edit"]]'.</msg>
+<msg time="2025-04-27T12:17:15.520091" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Edit"]]'.</msg>
 <arg>${EDIT_EVENT_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.457329" elapsed="0.102534"/>
+<status status="PASS" start="2025-04-27T12:17:15.520091" elapsed="0.077268"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EVENT_TITLE_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.560862" elapsed="0.011524"/>
+<status status="PASS" start="2025-04-27T12:17:15.598363" elapsed="0.010194"/>
 </kw>
 <kw name="Clear Text" owner="keywords">
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-03-31T15:06:16.573384" level="INFO">Length is 16.</msg>
-<msg time="2025-03-31T15:06:16.573384" level="INFO">${length} = 16</msg>
+<msg time="2025-04-27T12:17:15.609559" level="INFO">Length is 16.</msg>
+<msg time="2025-04-27T12:17:15.609559" level="INFO">${length} = 16</msg>
 <var>${length}</var>
 <arg>${text}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.573384" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:15.608557" elapsed="0.001002"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:16.574891" level="INFO">Clicking element 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
+<msg time="2025-04-27T12:17:15.609559" level="INFO">Clicking element 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.573384" elapsed="0.079779"/>
+<status status="PASS" start="2025-04-27T12:17:15.609559" elapsed="0.044853"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:16.654681" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:16.944399" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:16.944399" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:15.655412" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:15.938809" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:15.938809" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.654172" elapsed="0.302780"/>
+<status status="PASS" start="2025-04-27T12:17:15.654412" elapsed="0.300199"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2025-03-31T15:06:16.654172" elapsed="0.302780"/>
+<status status="PASS" start="2025-04-27T12:17:15.654412" elapsed="0.300199"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:16.956952" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:17.239810" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:17.239810" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:15.955612" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:16.229581" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:16.229581" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:16.956952" elapsed="0.294957"/>
+<status status="PASS" start="2025-04-27T12:17:15.955612" elapsed="0.285558"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2025-03-31T15:06:16.956952" elapsed="0.294957"/>
+<status status="PASS" start="2025-04-27T12:17:15.955612" elapsed="0.285558"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:17.252907" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:17.517531" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:17.517531" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:16.242168" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:16.521766" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:16.521766" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:17.251909" elapsed="0.280672"/>
+<status status="PASS" start="2025-04-27T12:17:16.241170" elapsed="0.291919"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2025-03-31T15:06:17.251909" elapsed="0.280672"/>
+<status status="PASS" start="2025-04-27T12:17:16.241170" elapsed="0.291919"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:17.533581" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:17.810846" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:17.810846" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:16.534086" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:16.814086" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:16.814086" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:17.532581" elapsed="0.289798"/>
+<status status="PASS" start="2025-04-27T12:17:16.534086" elapsed="0.291547"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2025-03-31T15:06:17.532581" elapsed="0.290808"/>
+<status status="PASS" start="2025-04-27T12:17:16.534086" elapsed="0.291547"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:17.823389" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:18.106243" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:18.106243" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:16.826169" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:17.103727" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:17.103727" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:17.823389" elapsed="0.295905"/>
+<status status="PASS" start="2025-04-27T12:17:16.825633" elapsed="0.289792"/>
 </kw>
 <var name="${i}">4</var>
-<status status="PASS" start="2025-03-31T15:06:17.823389" elapsed="0.295905"/>
+<status status="PASS" start="2025-04-27T12:17:16.825633" elapsed="0.289792"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:18.120291" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:18.400106" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:18.400106" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:17.115425" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:17.394657" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:17.394657" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:18.119294" elapsed="0.293325"/>
+<status status="PASS" start="2025-04-27T12:17:17.115425" elapsed="0.290119"/>
 </kw>
 <var name="${i}">5</var>
-<status status="PASS" start="2025-03-31T15:06:18.119294" elapsed="0.293325"/>
+<status status="PASS" start="2025-04-27T12:17:17.115425" elapsed="0.290119"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:18.413620" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:18.684121" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:18.684121" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:17.406621" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:17.688604" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:17.688604" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:18.412619" elapsed="0.284185"/>
+<status status="PASS" start="2025-04-27T12:17:17.406621" elapsed="0.293565"/>
 </kw>
 <var name="${i}">6</var>
-<status status="PASS" start="2025-03-31T15:06:18.412619" elapsed="0.284185"/>
+<status status="PASS" start="2025-04-27T12:17:17.406621" elapsed="0.293565"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:18.697308" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:18.975855" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:18.975855" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:17.701185" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:17.970525" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:17.971526" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:18.697308" elapsed="0.290670"/>
+<status status="PASS" start="2025-04-27T12:17:17.700186" elapsed="0.288414"/>
 </kw>
 <var name="${i}">7</var>
-<status status="PASS" start="2025-03-31T15:06:18.697308" elapsed="0.291676"/>
+<status status="PASS" start="2025-04-27T12:17:17.700186" elapsed="0.288414"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:18.988984" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:19.259046" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:19.259046" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:17.989600" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:18.260590" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:18.260590" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:18.988984" elapsed="0.281864"/>
+<status status="PASS" start="2025-04-27T12:17:17.988600" elapsed="0.285519"/>
 </kw>
 <var name="${i}">8</var>
-<status status="PASS" start="2025-03-31T15:06:18.988984" elapsed="0.281864"/>
+<status status="PASS" start="2025-04-27T12:17:17.988600" elapsed="0.285519"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:19.271844" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:19.556837" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:19.557835" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:18.275625" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:18.553758" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:18.553758" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:19.271844" elapsed="0.315521"/>
+<status status="PASS" start="2025-04-27T12:17:18.275625" elapsed="0.289935"/>
 </kw>
 <var name="${i}">9</var>
-<status status="PASS" start="2025-03-31T15:06:19.270848" elapsed="0.316517"/>
+<status status="PASS" start="2025-04-27T12:17:18.275625" elapsed="0.289935"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:19.588376" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:19.881244" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:19.881244" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:18.566643" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:18.846980" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:18.846980" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:19.588376" elapsed="0.310568"/>
+<status status="PASS" start="2025-04-27T12:17:18.565560" elapsed="0.298474"/>
 </kw>
 <var name="${i}">10</var>
-<status status="PASS" start="2025-03-31T15:06:19.587365" elapsed="0.311579"/>
+<status status="PASS" start="2025-04-27T12:17:18.565560" elapsed="0.298474"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:19.899946" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:20.181327" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:20.181327" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:18.866077" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:19.134983" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:19.134983" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:19.898944" elapsed="0.297647"/>
+<status status="PASS" start="2025-04-27T12:17:18.865540" elapsed="0.287036"/>
 </kw>
 <var name="${i}">11</var>
-<status status="PASS" start="2025-03-31T15:06:19.898944" elapsed="0.297647"/>
+<status status="PASS" start="2025-04-27T12:17:18.864034" elapsed="0.288542"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:20.197617" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:20.474500" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:20.474500" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:19.153608" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:19.428814" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:19.428814" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:20.197617" elapsed="0.294025"/>
+<status status="PASS" start="2025-04-27T12:17:19.153084" elapsed="0.286290"/>
 </kw>
 <var name="${i}">12</var>
-<status status="PASS" start="2025-03-31T15:06:20.196591" elapsed="0.296050"/>
+<status status="PASS" start="2025-04-27T12:17:19.153084" elapsed="0.287290"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:20.492641" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:20.769969" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:20.769969" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:19.440374" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:19.707462" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:19.707462" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:20.492641" elapsed="0.292371"/>
+<status status="PASS" start="2025-04-27T12:17:19.440374" elapsed="0.277576"/>
 </kw>
 <var name="${i}">13</var>
-<status status="PASS" start="2025-03-31T15:06:20.492641" elapsed="0.292371"/>
+<status status="PASS" start="2025-04-27T12:17:19.440374" elapsed="0.277576"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:20.786020" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:21.065285" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:21.065826" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:19.718950" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:19.988389" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:19.988389" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:20.786020" elapsed="0.296186"/>
+<status status="PASS" start="2025-04-27T12:17:19.717950" elapsed="0.280950"/>
 </kw>
 <var name="${i}">14</var>
-<status status="PASS" start="2025-03-31T15:06:20.785012" elapsed="0.297194"/>
+<status status="PASS" start="2025-04-27T12:17:19.717950" elapsed="0.280950"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:21.083243" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
-<msg time="2025-03-31T15:06:21.360609" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:21.360609" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:19.999900" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="title"] element.</msg>
+<msg time="2025-04-27T12:17:20.268454" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:20.268454" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:21.082717" elapsed="0.292975"/>
+<status status="PASS" start="2025-04-27T12:17:19.998900" elapsed="0.279661"/>
 </kw>
 <var name="${i}">15</var>
-<status status="PASS" start="2025-03-31T15:06:21.082206" elapsed="0.293486"/>
+<status status="PASS" start="2025-04-27T12:17:19.998900" elapsed="0.279661"/>
 </iter>
 <var>${i}</var>
 <value>${length}</value>
-<status status="PASS" start="2025-03-31T15:06:16.653163" elapsed="4.722529"/>
+<status status="PASS" start="2025-04-27T12:17:15.654412" elapsed="4.624149"/>
 </for>
 <arg>${EVENT_TITLE_XPATH}</arg>
 <arg>${current_title}</arg>
-<status status="PASS" start="2025-03-31T15:06:16.573384" elapsed="4.802308"/>
+<status status="PASS" start="2025-04-27T12:17:15.608557" elapsed="4.671006"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:21.376682" level="INFO">Typing text 'Updated Event Title' into text field 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
+<msg time="2025-04-27T12:17:20.279563" level="INFO">Typing text 'Updated Event Title' into text field 'xpath=//input[@id="outlined-basic" and @name="title"]'.</msg>
 <arg>${EVENT_TITLE_XPATH}</arg>
 <arg>${new_title}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:21.376682" elapsed="0.164200"/>
+<status status="PASS" start="2025-04-27T12:17:20.279563" elapsed="0.147571"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:21.540882" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Save"]'.</msg>
+<msg time="2025-04-27T12:17:20.428140" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Save"]'.</msg>
 <arg>${SAVE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:21.540882" elapsed="0.053123"/>
+<status status="PASS" start="2025-04-27T12:17:20.427134" elapsed="0.041988"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:23.595314" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:22.469384" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:21.595009" elapsed="2.000305"/>
+<status status="PASS" start="2025-04-27T12:17:20.469122" elapsed="2.000262"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:23.595314" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-03-31"]</msg>
+<msg time="2025-04-27T12:17:22.469384" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-04-27"]</msg>
 <var>${DATE_XPATH}</var>
 <arg>${DATE_CELL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${date}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.595314" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:22.469384" elapsed="0.000000"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:23.613255" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-03-31"]' contains text 'Updated Event Title'.</msg>
+<msg time="2025-04-27T12:17:22.487992" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-04-27"]' contains text 'Updated Event Title'.</msg>
 <arg>${DATE_XPATH}</arg>
 <arg>${new_title}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.595314" elapsed="0.017941"/>
+<status status="PASS" start="2025-04-27T12:17:22.470402" elapsed="0.017590"/>
 </kw>
 <arg>${date}</arg>
 <arg>Test Event Title</arg>
 <arg>Updated Event Title</arg>
-<status status="PASS" start="2025-03-31T15:06:15.958335" elapsed="7.654920"/>
+<status status="PASS" start="2025-04-27T12:17:15.241828" elapsed="7.246164"/>
 </kw>
 <kw name="Delete Event" owner="keywords">
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:23.614763" level="INFO">${EVENT_XPATH} = xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Updated Event Title")]</msg>
+<msg time="2025-04-27T12:17:22.488993" level="INFO">${EVENT_XPATH} = xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Updated Event Title")]</msg>
 <var>${EVENT_XPATH}</var>
 <arg>${EVENT_BLOCK_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${title}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.614763" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:22.488993" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:23.614763" level="INFO">Clicking element 'xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Updated Event Title")]'.</msg>
+<msg time="2025-04-27T12:17:22.488993" level="INFO">Clicking element 'xpath=//div[contains(@class, "fc-event-main") and contains(normalize-space(), "Updated Event Title")]'.</msg>
 <arg>${EVENT_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.614763" elapsed="0.080638"/>
+<status status="PASS" start="2025-04-27T12:17:22.488993" elapsed="0.055217"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:23.695401" level="INFO">${DETAILS_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h5[normalize-space(.)="Updated Event Title"]]</msg>
+<msg time="2025-04-27T12:17:22.544210" level="INFO">${DETAILS_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h5[normalize-space(.)="Updated Event Title"]]</msg>
 <var>${DETAILS_MODAL_XPATH}</var>
 <arg>${DETAILS_MODAL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${title}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.695401" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:22.544210" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${DETAILS_MODAL_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.695401" elapsed="0.225168"/>
+<status status="PASS" start="2025-04-27T12:17:22.544210" elapsed="0.424381"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:23.920569" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Delete"]]'.</msg>
+<msg time="2025-04-27T12:17:22.968591" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Delete"]]'.</msg>
 <arg>${DELETE_EVENT_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.920569" elapsed="0.056947"/>
+<status status="PASS" start="2025-04-27T12:17:22.968591" elapsed="0.048080"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:23.977516" level="INFO">${CONFIRM_DELETE_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h6[normalize-space(.)='Are you sure you want to delete "Updated Event Title"?']]</msg>
+<msg time="2025-04-27T12:17:23.016671" level="INFO">${CONFIRM_DELETE_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h6[normalize-space(.)='Are you sure you want to delete "Updated Event Title"?']]</msg>
 <var>${CONFIRM_DELETE_MODAL_XPATH}</var>
 <arg>${CONFIRM_DELETE_MODAL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${title}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.977516" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:23.016671" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CONFIRM_DELETE_MODAL_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.977516" elapsed="0.015391"/>
+<status status="PASS" start="2025-04-27T12:17:23.016671" elapsed="0.013297"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:23.993909" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Yes"]]'.</msg>
+<msg time="2025-04-27T12:17:23.030970" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Yes"]]'.</msg>
 <arg>${CONFIRM_DELETE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:23.992907" elapsed="0.052135"/>
+<status status="PASS" start="2025-04-27T12:17:23.029968" elapsed="0.049777"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:26.045975" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:25.079973" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:24.045042" elapsed="2.000933"/>
+<status status="PASS" start="2025-04-27T12:17:23.079745" elapsed="2.000228"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:26.046979" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-03-31"]</msg>
+<msg time="2025-04-27T12:17:25.080477" level="INFO">${DATE_XPATH} = xpath=//td[@role="gridcell" and @data-date="2025-04-27"]</msg>
 <var>${DATE_XPATH}</var>
 <arg>${DATE_CELL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${date}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:26.045975" elapsed="0.001004"/>
+<status status="PASS" start="2025-04-27T12:17:25.079973" elapsed="0.000504"/>
 </kw>
 <kw name="Element Should Not Contain" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:26.065011" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-03-31"]' does not contain text 'Updated Event Title'.</msg>
+<msg time="2025-04-27T12:17:25.091747" level="INFO">Element 'xpath=//td[@role="gridcell" and @data-date="2025-04-27"]' does not contain text 'Updated Event Title'.</msg>
 <arg>${DATE_XPATH}</arg>
 <arg>${title}</arg>
 <doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:26.046979" elapsed="0.018032"/>
+<status status="PASS" start="2025-04-27T12:17:25.080477" elapsed="0.011270"/>
 </kw>
 <arg>${date}</arg>
 <arg>Updated Event Title</arg>
-<status status="PASS" start="2025-03-31T15:06:23.613255" elapsed="2.451756"/>
+<status status="PASS" start="2025-04-27T12:17:22.488993" elapsed="2.602754"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:26.066010" elapsed="2.166467"/>
+<status status="PASS" start="2025-04-27T12:17:25.092749" elapsed="2.143187"/>
 </kw>
 <doc>This test case verifies the event CRUD functionality of the application.</doc>
 <tag>events</tag>
-<status status="PASS" start="2025-03-31T15:06:05.557526" elapsed="22.674951"/>
+<status status="PASS" start="2025-04-27T12:17:04.817932" elapsed="22.418004"/>
 </test>
 <test id="s1-s1-t4" name="Group Functions Test" line="41">
 <kw name="Open Login Page" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:28.234569" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
+<msg time="2025-04-27T12:17:27.236838" level="INFO">Opening browser 'Chrome' to base url 'https://mycalendarapp-frontend.onrender.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-31T15:06:28.234569" elapsed="1.860581"/>
+<status status="PASS" start="2025-04-27T12:17:27.236838" elapsed="1.699047"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-27T12:17:28.935885" elapsed="0.023221"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:30.098662" level="INFO">Page title is 'DAyLI'.</msg>
+<msg time="2025-04-27T12:17:28.963107" level="INFO">Page title is 'DAyLI'.</msg>
 <arg>DAyLI</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-03-31T15:06:30.095150" elapsed="0.003512"/>
+<status status="PASS" start="2025-04-27T12:17:28.959106" elapsed="0.004001"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:06:28.233490" elapsed="1.866681"/>
+<status status="PASS" start="2025-04-27T12:17:27.236838" elapsed="1.726269"/>
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:30.100171" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
+<msg time="2025-04-27T12:17:28.964108" level="INFO">Typing text 'apitesteremail@gmail.com' into text field 'xpath=//input[@id="outlined-basic" and @type="text"]'.</msg>
 <arg>${EMAIL_FIELD_XPATH}</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:30.100171" elapsed="0.121139"/>
+<status status="PASS" start="2025-04-27T12:17:28.964108" elapsed="0.123416"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:30.221310" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
+<msg time="2025-04-27T12:17:29.088703" level="INFO">Typing text 'APITestP@ss1' into text field 'xpath=//input[@id="outlined-adornment-password" and @type="password"]'.</msg>
 <arg>${PASSWORD_FIELD_XPATH}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:30.221310" elapsed="0.128627"/>
+<status status="PASS" start="2025-04-27T12:17:29.087524" elapsed="0.086931"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:30.350936" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
+<msg time="2025-04-27T12:17:29.175961" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Login"]'.</msg>
 <arg>${LOGIN_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:30.349937" elapsed="0.069409"/>
+<status status="PASS" start="2025-04-27T12:17:29.174455" elapsed="0.065850"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:30.419346" elapsed="1.056793"/>
+<status status="PASS" start="2025-04-27T12:17:29.241303" elapsed="0.858123"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:33.476651" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:32.099645" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:31.476139" elapsed="2.000512"/>
+<status status="PASS" start="2025-04-27T12:17:30.099426" elapsed="2.000219"/>
 </kw>
 <kw name="Reload Page" owner="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" start="2025-03-31T15:06:33.477158" elapsed="0.136599"/>
+<status status="PASS" start="2025-04-27T12:17:32.099645" elapsed="0.149361"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HEADER_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:33.613757" elapsed="0.017305"/>
+<status status="PASS" start="2025-04-27T12:17:32.249006" elapsed="0.014552"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:35.631623" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:34.263732" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:33.631062" elapsed="2.001103"/>
+<status status="PASS" start="2025-04-27T12:17:32.263558" elapsed="2.000174"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:35.632290" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
+<msg time="2025-04-27T12:17:34.264237" level="INFO">Verifying element 'xpath=//div[contains(@class, "MuiTypography-h6")]' contains exact text 'APITester'.</msg>
 <arg>${HEADER_TEXTAREA_XPATH}</arg>
 <arg>${USERNAME}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:35.632290" elapsed="0.020550"/>
+<status status="PASS" start="2025-04-27T12:17:34.263732" elapsed="0.016041"/>
 </kw>
-<status status="PASS" start="2025-03-31T15:06:30.100171" elapsed="5.552669"/>
+<status status="PASS" start="2025-04-27T12:17:28.964108" elapsed="5.316666"/>
 </kw>
 <kw name="Go To Menu" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:35.653836" level="INFO">Clicking element 'xpath=//a[.//span[normalize-space(text())="Groups"]]'.</msg>
+<msg time="2025-04-27T12:17:34.280774" level="INFO">Clicking element 'xpath=//a[.//span[normalize-space(text())="Groups"]]'.</msg>
 <arg>${menu_xpath}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:35.653836" elapsed="0.093364"/>
+<status status="PASS" start="2025-04-27T12:17:34.280774" elapsed="0.070969"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${GROUPS_MENU_TITLE_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:35.748199" elapsed="0.123743"/>
+<status status="PASS" start="2025-04-27T12:17:34.351743" elapsed="0.078760"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:35.872476" level="INFO">Verifying element 'xpath=//h4[normalize-space(text())="My Groups"]' contains exact text 'My Groups'.</msg>
+<msg time="2025-04-27T12:17:34.431503" level="INFO">Verifying element 'xpath=//h4[normalize-space(text())="My Groups"]' contains exact text 'My Groups'.</msg>
 <arg>${GROUPS_MENU_TITLE_XPATH}</arg>
 <arg>My Groups</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-31T15:06:35.871942" elapsed="0.017084"/>
+<status status="PASS" start="2025-04-27T12:17:34.431503" elapsed="0.011322"/>
 </kw>
 <arg>${GROUPS_BUTTON_XPATH}</arg>
-<status status="PASS" start="2025-03-31T15:06:35.653836" elapsed="0.235739"/>
+<status status="PASS" start="2025-04-27T12:17:34.280774" elapsed="0.162051"/>
 </kw>
 <kw name="Create Group" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:35.890114" level="INFO">Clicking element 'xpath=//button[@aria-label="add-group"]'.</msg>
+<msg time="2025-04-27T12:17:34.443826" level="INFO">Clicking element 'xpath=//button[@aria-label="add-group"]'.</msg>
 <arg>${ADD_GROUP_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:35.890114" elapsed="0.135910"/>
+<status status="PASS" start="2025-04-27T12:17:34.443826" elapsed="0.110253"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${GROUP_NAME_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:36.027036" elapsed="0.019279"/>
+<status status="PASS" start="2025-04-27T12:17:34.554079" elapsed="0.015154"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:36.047466" level="INFO">Typing text 'New Group' into text field 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
+<msg time="2025-04-27T12:17:34.570234" level="INFO">Typing text 'New Group' into text field 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
 <arg>${GROUP_NAME_XPATH}</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:36.046315" elapsed="0.077734"/>
+<status status="PASS" start="2025-04-27T12:17:34.570234" elapsed="0.077345"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:36.124574" level="INFO">Typing text 'New Group Description' into text field 'xpath=//textarea[@id="outlined-multiline-static" and @name="description"]'.</msg>
+<msg time="2025-04-27T12:17:34.648578" level="INFO">Typing text 'New Group Description' into text field 'xpath=//textarea[@id="outlined-multiline-static" and @name="description"]'.</msg>
 <arg>${GROUP_DESCRIPTION_XPATH}</arg>
 <arg>${description}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:36.124574" elapsed="0.096021"/>
+<status status="PASS" start="2025-04-27T12:17:34.647579" elapsed="0.096403"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:36.221595" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Create"]'.</msg>
+<msg time="2025-04-27T12:17:34.743982" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Create"]'.</msg>
 <arg>${CREATE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:36.221595" elapsed="0.087071"/>
+<status status="PASS" start="2025-04-27T12:17:34.743982" elapsed="0.066725"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:38.308719" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:36.812096" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:36.308666" elapsed="2.000053"/>
+<status status="PASS" start="2025-04-27T12:17:34.811706" elapsed="2.000390"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:38.308719" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]</msg>
+<msg time="2025-04-27T12:17:36.812604" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]</msg>
 <var>${GROUPS_LIST_ELEMENT_XPATH}</var>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.308719" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:36.812096" elapsed="0.000508"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:38.319716" level="INFO">Current page contains element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]'.</msg>
+<msg time="2025-04-27T12:17:36.820186" level="INFO">Current page contains element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]'.</msg>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.308719" elapsed="0.010997"/>
+<status status="PASS" start="2025-04-27T12:17:36.812604" elapsed="0.007582"/>
 </kw>
 <arg>New Group</arg>
 <arg>New Group Description</arg>
-<status status="PASS" start="2025-03-31T15:06:35.889575" elapsed="2.430682"/>
+<status status="PASS" start="2025-04-27T12:17:34.443826" elapsed="2.376360"/>
 </kw>
 <kw name="Edit Group" owner="keywords">
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:38.320799" level="INFO">${EDIT_GROUP_BUTTON_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]//button[@aria-label="edit"]</msg>
+<msg time="2025-04-27T12:17:36.821183" level="INFO">${EDIT_GROUP_BUTTON_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]//button[@aria-label="edit"]</msg>
 <var>${EDIT_GROUP_BUTTON_XPATH}</var>
 <arg>${EDIT_GROUP_BUTTON_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${current_name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.320799" elapsed="0.000525"/>
+<status status="PASS" start="2025-04-27T12:17:36.821183" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:38.321324" level="INFO">Clicking element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]//button[@aria-label="edit"]'.</msg>
+<msg time="2025-04-27T12:17:36.821183" level="INFO">Clicking element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="New Group"]]//button[@aria-label="edit"]'.</msg>
 <arg>${EDIT_GROUP_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.321324" elapsed="0.076639"/>
+<status status="PASS" start="2025-04-27T12:17:36.821183" elapsed="0.066127"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${GROUP_NAME_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.397963" elapsed="0.017118"/>
+<status status="PASS" start="2025-04-27T12:17:36.887310" elapsed="0.009631"/>
 </kw>
 <kw name="Clear Text" owner="keywords">
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-03-31T15:06:38.416089" level="INFO">Length is 9.</msg>
-<msg time="2025-03-31T15:06:38.416089" level="INFO">${length} = 9</msg>
+<msg time="2025-04-27T12:17:36.897941" level="INFO">Length is 9.</msg>
+<msg time="2025-04-27T12:17:36.897941" level="INFO">${length} = 9</msg>
 <var>${length}</var>
 <arg>${text}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.416089" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:36.897941" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:38.416609" level="INFO">Clicking element 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
+<msg time="2025-04-27T12:17:36.897941" level="INFO">Clicking element 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.416089" elapsed="0.082717"/>
+<status status="PASS" start="2025-04-27T12:17:36.897941" elapsed="0.045358"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:38.500806" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:38.791256" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:38.791256" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:36.944309" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:37.226470" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:37.226470" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.499808" elapsed="0.310383"/>
+<status status="PASS" start="2025-04-27T12:17:36.943299" elapsed="0.298367"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2025-03-31T15:06:38.499808" elapsed="0.310383"/>
+<status status="PASS" start="2025-04-27T12:17:36.943299" elapsed="0.299368"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:38.811204" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:39.103369" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:39.103369" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:37.242667" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:37.538071" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:37.538071" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:38.810191" elapsed="0.303869"/>
+<status status="PASS" start="2025-04-27T12:17:37.242667" elapsed="0.303425"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2025-03-31T15:06:38.810191" elapsed="0.303869"/>
+<status status="PASS" start="2025-04-27T12:17:37.242667" elapsed="0.303425"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:39.114900" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:39.401790" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:39.401790" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:37.547100" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:37.817148" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:37.817148" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:39.114900" elapsed="0.306866"/>
+<status status="PASS" start="2025-04-27T12:17:37.547100" elapsed="0.277129"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2025-03-31T15:06:39.114060" elapsed="0.307706"/>
+<status status="PASS" start="2025-04-27T12:17:37.546092" elapsed="0.278137"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:39.423272" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:39.704662" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:39.705659" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:37.825735" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:38.099271" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:38.099271" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:39.421766" elapsed="0.293455"/>
+<status status="PASS" start="2025-04-27T12:17:37.825735" elapsed="0.281580"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2025-03-31T15:06:39.421766" elapsed="0.293455"/>
+<status status="PASS" start="2025-04-27T12:17:37.824229" elapsed="0.283086"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:39.716817" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:39.985552" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:39.986554" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:38.107315" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:38.390582" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:38.391581" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:39.715221" elapsed="0.278438"/>
+<status status="PASS" start="2025-04-27T12:17:38.107315" elapsed="0.294012"/>
 </kw>
 <var name="${i}">4</var>
-<status status="PASS" start="2025-03-31T15:06:39.715221" elapsed="0.278438"/>
+<status status="PASS" start="2025-04-27T12:17:38.107315" elapsed="0.294012"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:39.995219" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:40.278353" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:40.278353" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:38.402326" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:38.684365" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:38.684365" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:39.995219" elapsed="0.293656"/>
+<status status="PASS" start="2025-04-27T12:17:38.402326" elapsed="0.294012"/>
 </kw>
 <var name="${i}">5</var>
-<status status="PASS" start="2025-03-31T15:06:39.995163" elapsed="0.294711"/>
+<status status="PASS" start="2025-04-27T12:17:38.401327" elapsed="0.295011"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:40.289874" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:40.569215" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:40.569215" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:38.697447" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:38.974082" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:38.974082" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:40.289874" elapsed="0.293697"/>
+<status status="PASS" start="2025-04-27T12:17:38.696844" elapsed="0.289534"/>
 </kw>
 <var name="${i}">6</var>
-<status status="PASS" start="2025-03-31T15:06:40.289874" elapsed="0.294202"/>
+<status status="PASS" start="2025-04-27T12:17:38.696338" elapsed="0.290040"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:40.584977" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:40.863209" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:40.863209" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:38.987408" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:39.264149" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:39.264149" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:40.584471" elapsed="0.287432"/>
+<status status="PASS" start="2025-04-27T12:17:38.987408" elapsed="0.285789"/>
 </kw>
 <var name="${i}">7</var>
-<status status="PASS" start="2025-03-31T15:06:40.584076" elapsed="0.287827"/>
+<status status="PASS" start="2025-04-27T12:17:38.986378" elapsed="0.286819"/>
 </iter>
 <iter>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:40.871903" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
-<msg time="2025-03-31T15:06:41.142513" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-03-31T15:06:41.142513" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-27T12:17:39.274194" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//input[@id="outlined-basic" and @name="name"] element.</msg>
+<msg time="2025-04-27T12:17:39.553798" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-27T12:17:39.553798" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${locator}</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:40.871903" elapsed="0.279176"/>
+<status status="PASS" start="2025-04-27T12:17:39.273197" elapsed="0.288621"/>
 </kw>
 <var name="${i}">8</var>
-<status status="PASS" start="2025-03-31T15:06:40.871903" elapsed="0.279176"/>
+<status status="PASS" start="2025-04-27T12:17:39.273197" elapsed="0.288621"/>
 </iter>
 <var>${i}</var>
 <value>${length}</value>
-<status status="PASS" start="2025-03-31T15:06:38.499808" elapsed="2.651271"/>
+<status status="PASS" start="2025-04-27T12:17:36.943299" elapsed="2.618519"/>
 </for>
 <arg>${GROUP_NAME_XPATH}</arg>
 <arg>${current_name}</arg>
-<status status="PASS" start="2025-03-31T15:06:38.415081" elapsed="2.735998"/>
+<status status="PASS" start="2025-04-27T12:17:36.897941" elapsed="2.663877"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:41.151079" level="INFO">Typing text 'Edited Group Name' into text field 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
+<msg time="2025-04-27T12:17:39.562825" level="INFO">Typing text 'Edited Group Name' into text field 'xpath=//input[@id="outlined-basic" and @name="name"]'.</msg>
 <arg>${GROUP_NAME_XPATH}</arg>
 <arg>${new_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:41.151079" elapsed="0.060493"/>
+<status status="PASS" start="2025-04-27T12:17:39.561818" elapsed="0.058838"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:41.212581" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Save"]'.</msg>
+<msg time="2025-04-27T12:17:39.621586" level="INFO">Clicking element 'xpath=//button[@type="submit" and normalize-space(text())="Save"]'.</msg>
 <arg>${SAVE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:41.212581" elapsed="0.053977"/>
+<status status="PASS" start="2025-04-27T12:17:39.620656" elapsed="0.049860"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:43.267987" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:41.671881" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:41.266558" elapsed="2.001429"/>
+<status status="PASS" start="2025-04-27T12:17:39.670516" elapsed="2.001365"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:43.267987" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]</msg>
+<msg time="2025-04-27T12:17:41.671881" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]</msg>
 <var>${GROUPS_LIST_ELEMENT_XPATH}</var>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${new_name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.267987" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:41.671881" elapsed="0.000000"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:43.278777" level="INFO">Current page contains element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]'.</msg>
+<msg time="2025-04-27T12:17:41.680917" level="INFO">Current page contains element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]'.</msg>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.268832" elapsed="0.009945"/>
+<status status="PASS" start="2025-04-27T12:17:41.671881" elapsed="0.009036"/>
 </kw>
 <arg>New Group</arg>
 <arg>Edited Group Name</arg>
-<status status="PASS" start="2025-03-31T15:06:38.320257" elapsed="4.958520"/>
+<status status="PASS" start="2025-04-27T12:17:36.820186" elapsed="4.860731"/>
 </kw>
 <kw name="Delete Group" owner="keywords">
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:43.279773" level="INFO">${DELETE_GROUP_BUTTON_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]//button[@aria-label="delete"]</msg>
+<msg time="2025-04-27T12:17:41.681916" level="INFO">${DELETE_GROUP_BUTTON_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]//button[@aria-label="delete"]</msg>
 <var>${DELETE_GROUP_BUTTON_XPATH}</var>
 <arg>${DELETE_GROUP_BUTTON_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.279773" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:41.681916" elapsed="0.000000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:43.279773" level="INFO">Clicking element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]//button[@aria-label="delete"]'.</msg>
+<msg time="2025-04-27T12:17:41.681916" level="INFO">Clicking element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]//button[@aria-label="delete"]'.</msg>
 <arg>${DELETE_GROUP_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.279773" elapsed="0.060599"/>
+<status status="PASS" start="2025-04-27T12:17:41.681916" elapsed="0.050248"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:43.340372" level="INFO">${CONFIRM_DELETE_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h6[normalize-space(.)='Are you sure you want to delete "Edited Group Name"?']]</msg>
+<msg time="2025-04-27T12:17:41.732164" level="INFO">${CONFIRM_DELETE_MODAL_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and @tabindex="-1"][.//h6[normalize-space(.)='Are you sure you want to delete "Edited Group Name"?']]</msg>
 <var>${CONFIRM_DELETE_MODAL_XPATH}</var>
 <arg>${CONFIRM_DELETE_MODAL_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.340372" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:41.732164" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CONFIRM_DELETE_MODAL_XPATH}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.341362" elapsed="0.016514"/>
+<status status="PASS" start="2025-04-27T12:17:41.732164" elapsed="0.015815"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:43.359673" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Yes"]]'.</msg>
+<msg time="2025-04-27T12:17:41.747979" level="INFO">Clicking element 'xpath=//button[@type="button" and .//text()[normalize-space()="Yes"]]'.</msg>
 <arg>${CONFIRM_DELETE_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.359673" elapsed="0.053310"/>
+<status status="PASS" start="2025-04-27T12:17:41.747979" elapsed="0.046511"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-31T15:06:45.413898" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-27T12:17:43.795026" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-31T15:06:43.412983" elapsed="2.001458"/>
+<status status="PASS" start="2025-04-27T12:17:41.794490" elapsed="2.000536"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2025-03-31T15:06:45.414547" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]</msg>
+<msg time="2025-04-27T12:17:43.795026" level="INFO">${GROUPS_LIST_ELEMENT_XPATH} = xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]</msg>
 <var>${GROUPS_LIST_ELEMENT_XPATH}</var>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <arg>placeholder</arg>
 <arg>${name}</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2025-03-31T15:06:45.414547" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-27T12:17:43.795026" elapsed="0.000000"/>
 </kw>
 <kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
-<msg time="2025-03-31T15:06:45.422666" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]'.</msg>
+<msg time="2025-04-27T12:17:43.800555" level="INFO">Current page does not contain element 'xpath=//div[contains(@class, "MuiBox-root") and contains(@class, "css-1ono1ud")][.//h6[normalize-space(text())="Edited Group Name"]]'.</msg>
 <arg>${GROUPS_LIST_ELEMENT_XPATH}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<status status="PASS" start="2025-03-31T15:06:45.414547" elapsed="0.008119"/>
+<status status="PASS" start="2025-04-27T12:17:43.795026" elapsed="0.005529"/>
 </kw>
 <arg>Edited Group Name</arg>
-<status status="PASS" start="2025-03-31T15:06:43.279773" elapsed="2.142893"/>
+<status status="PASS" start="2025-04-27T12:17:41.681916" elapsed="2.118639"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-31T15:06:45.422666" elapsed="2.148098"/>
+<status status="PASS" start="2025-04-27T12:17:43.800555" elapsed="2.177000"/>
 </kw>
 <doc>This test case verifies the group CRUD functionality of the application.</doc>
 <tag>groups</tag>
-<status status="PASS" start="2025-03-31T15:06:28.233490" elapsed="19.338912"/>
+<status status="PASS" start="2025-04-27T12:17:27.236838" elapsed="18.740717"/>
 </test>
-<status status="PASS" start="2025-03-31T15:05:43.952642" elapsed="63.620279"/>
+<status status="PASS" start="2025-04-27T12:16:44.791403" elapsed="61.187053"/>
 </suite>
-<status status="PASS" start="2025-03-31T15:05:43.923998" elapsed="63.649933"/>
+<status status="PASS" start="2025-04-27T12:16:44.771721" elapsed="61.206735"/>
 </suite>
 <statistics>
 <total>
