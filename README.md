@@ -10,7 +10,7 @@
 
 DAyLI lets users manage their schedule two ways: through a standard graphical calendar interface, or by talking to a chatbot in plain English. Both paths hit the same backend APIs, so the chatbot is a genuine alternative to manual input rather than a bolted-on feature.
 
-A user can either click into the calendar to add an event manually, or type *"Schedule a dentist appointment for next Tuesday at 3 PM"* — the chatbot extracts the entities, calls the relevant endpoint, and confirms back in natural language.
+A user can either click into the calendar to add an event manually, or type *"Schedule a dentist appointment for next Tuesday at 3 PM"* - the chatbot extracts the entities, calls the relevant endpoint, and confirms back in natural language.
 
 <p align="center">
   <img src="docs/Screenshots/calendar.png" alt="Calendar month view">
@@ -24,7 +24,7 @@ A user can either click into the calendar to add an event manually, or type *"Sc
 - **Color-coded groups** for organizing events, with client-side filtering by group
 - **Chatbot assistant** (Botpress + OpenAI GPT) capable of creating, updating, deleting, and summarizing events through natural language
 - **Form validation** with Yup on the frontend
-- **Automated CI** — separate API and UI test pipelines running on every push
+- **Automated CI** - separate API and UI test pipelines running on every push
 
 ## Tech stack
 
